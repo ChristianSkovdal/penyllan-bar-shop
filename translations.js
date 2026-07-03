@@ -59,7 +59,7 @@ window.translations = {
     "payment.note": `Ved betaling med kontant tager vi imod danske og svenske kroner samt euro.
           For euro og svenske kroner bruger vi dagskursen uden gebyr eller nedskrivning af kursen.`,
 
-    "food.title": "Mad &amp; Snacks",
+    "food.title": "Mad & Snacks",
     "food.text": `Vi serverer hjemmelavede burgere og sprøde pommes frites — også en vegetarisk burger.
           Året rundt har vi desuden et udvalg af lækre <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.`,
     "food.note": `Følg vores <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
@@ -93,7 +93,7 @@ window.translations = {
 
     "event5.alt": "Pyntet træ med lyskæder i bryggeriet",
     "event5.date": "April",
-    "event5.title": "Påskebryg &amp; Rundvisning",
+    "event5.title": "Påskebryg & Rundvisning",
     "event5.text": "Sæsonens påskeøl smages sammen med en tur rundt i bryggeriet.",
 
     "event6.alt": "Mørk øl på bord med udsigt over havnen",
@@ -103,7 +103,7 @@ window.translations = {
 
     "event7.alt": "Ølkrus på tønde med lyskæder om aftenen",
     "event7.date": "Oktober",
-    "event7.title": "Whisky &amp; Øl Aften",
+    "event7.title": "Whisky & Øl Aften",
     "event7.text": "En hyggelig aften med smagning af fadlagrede specialøl og udvalgte whiskyer.",
 
     "event8.alt": "Bålfad på terrassen ved havnen om aftenen",
@@ -111,7 +111,7 @@ window.translations = {
     "event8.title": "Nytårsbrag på Kajen",
     "event8.text": "Vi fejrer det nye år med bobler, bål og fyrværkeri over havnen.",
 
-    "tours.title": "Rundvisning &amp; Ølsmagning",
+    "tours.title": "Rundvisning & Ølsmagning",
 
     "tour1.alt": "Smagning af mørk øl på bryggeriet",
     "tour1.title": "Den lange tur",
@@ -209,7 +209,7 @@ window.translations = {
     "payment.note": `When paying with cash we accept Danish and Swedish kroner as well as euros.
           For euros and Swedish kroner we use the daily exchange rate with no fee or markdown on the rate.`,
 
-    "food.title": "Food &amp; Snacks",
+    "food.title": "Food & Snacks",
     "food.text": `We serve homemade burgers and crispy fries — including a vegetarian burger.
           All year round we also have a selection of delicious <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.`,
     "food.note": `Follow our <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook page</a>
@@ -243,7 +243,7 @@ window.translations = {
 
     "event5.alt": "Decorated tree with fairy lights in the brewery",
     "event5.date": "April",
-    "event5.title": "Easter Brew &amp; Tour",
+    "event5.title": "Easter Brew & Tour",
     "event5.text": "Taste the season's Easter beer along with a tour of the brewery.",
 
     "event6.alt": "Dark beer on a table with a view of the harbour",
@@ -253,7 +253,7 @@ window.translations = {
 
     "event7.alt": "Beer mug on a barrel with fairy lights in the evening",
     "event7.date": "October",
-    "event7.title": "Whisky &amp; Beer Evening",
+    "event7.title": "Whisky & Beer Evening",
     "event7.text": "A cosy evening tasting barrel-aged special beers and selected whiskies.",
 
     "event8.alt": "Fire bowl on the terrace by the harbour in the evening",
@@ -261,7 +261,7 @@ window.translations = {
     "event8.title": "New Year's Bang at the Quay",
     "event8.text": "We celebrate the New Year with bubbly, bonfires and fireworks over the harbour.",
 
-    "tours.title": "Tour &amp; Beer Tasting",
+    "tours.title": "Tour & Beer Tasting",
 
     "tour1.alt": "Tasting dark beer at the brewery",
     "tour1.title": "The Long Tour",
@@ -359,7 +359,7 @@ window.translations = {
     "payment.note": `Bei Barzahlung akzeptieren wir dänische und schwedische Kronen sowie Euro.
           Für Euro und schwedische Kronen verwenden wir den Tageskurs ohne Gebühr oder Abschlag.`,
 
-    "food.title": "Essen &amp; Snacks",
+    "food.title": "Essen & Snacks",
     "food.text": `Wir servieren hausgemachte Burger und knusprige Pommes frites — auch einen vegetarischen Burger.
           Das ganze Jahr über haben wir außerdem eine Auswahl an leckeren <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> Kettle Chips.`,
     "food.note": `Folgen Sie unserer <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-Seite</a>
@@ -392,7 +392,7 @@ window.translations = {
 
     "event5.alt": "Geschmückter Baum mit Lichterketten in der Brauerei",
     "event5.date": "April",
-    "event5.title": "Osterbier &amp; Führung",
+    "event5.title": "Osterbier & Führung",
     "event5.text": "Probieren Sie das saisonale Osterbier bei einer Führung durch die Brauerei.",
 
     "event6.alt": "Dunkles Bier auf einem Tisch mit Blick auf den Hafen",
@@ -402,7 +402,7 @@ window.translations = {
 
     "event7.alt": "Bierkrug auf einem Fass mit Lichterketten am Abend",
     "event7.date": "Oktober",
-    "event7.title": "Whisky- &amp; Bierabend",
+    "event7.title": "Whisky- & Bierabend",
     "event7.text": "Ein gemütlicher Abend mit Verkostung von fassgelagerten Spezialbieren und ausgewählten Whiskys.",
 
     "event8.alt": "Feuerschale auf der Terrasse am Hafen am Abend",
@@ -410,7 +410,7 @@ window.translations = {
     "event8.title": "Silvesterknall am Kai",
     "event8.text": "Wir feiern das neue Jahr mit Sekt, Lagerfeuer und Feuerwerk über dem Hafen.",
 
-    "tours.title": "Führung &amp; Bierverkostung",
+    "tours.title": "Führung & Bierverkostung",
 
     "tour1.alt": "Verkostung von dunklem Bier in der Brauerei",
     "tour1.title": "Die lange Tour",
