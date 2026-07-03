@@ -17,14 +17,21 @@
     <a href="#top" class="logo">Penyllan Bar &amp; Shop</a>
 
     <nav class="main-nav" id="main-nav">
-      <a href="#aabningstider">Åbningstider</a>
-      <a href="#mad">Mad</a>
-      <a href="#arrangementer">Arrangementer</a>
-      <a href="#tours">Ølsmagning</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#aabningstider" data-i18n="nav.hours">Åbningstider</a>
+      <a href="#mad" data-i18n="nav.food">Mad</a>
+      <a href="#arrangementer" data-i18n="nav.events">Arrangementer</a>
+      <a href="#tours" data-i18n="nav.tours">Ølsmagning</a>
+      <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
     </nav>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Åbn menu" aria-expanded="false">
+    <div class="lang-switcher" id="lang-switcher">
+      <button type="button" class="lang-btn is-active" data-lang="da" aria-label="Dansk" title="Dansk">🇩🇰</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-label="English" title="English">🇬🇧</button>
+      <button type="button" class="lang-btn" data-lang="de" aria-label="Deutsch" title="Deutsch">🇩🇪</button>
+      <button type="button" class="lang-btn" data-lang="pl" aria-label="Polski" title="Polski">🇵🇱</button>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Åbn menu" data-i18n-aria="nav.toggle" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -33,70 +40,70 @@
 <main id="top">
 
   <!-- Hero carousel -->
-  <section class="carousel" id="carousel" aria-roledescription="karrusel" aria-label="Billeder fra arrangementer og fester">
+  <section class="carousel" id="carousel" aria-roledescription="karrusel" aria-label="Billeder fra arrangementer og fester" data-i18n-aria="carousel.ariaLabel">
 
     <div class="carousel-track" id="carousel-track">
 
       <div class="slide is-active" data-index="0">
-        <img src="images/sommerfest-cocktail.jpg" alt="Cocktail med citron ved havnen i solskin">
+        <img src="images/sommerfest-cocktail.jpg" alt="Cocktail med citron ved havnen i solskin" data-i18n-alt="slide1.alt">
         <div class="slide-caption">
-          <p class="eyebrow">Hver sommer</p>
-          <h2>Sommerfest ved Havnen</h2>
-          <p>Livemusik, fadøl og solnedgang over kajen — hele Tejn samles til den årlige sommerfest.</p>
+          <p class="eyebrow" data-i18n="slide1.eyebrow">Hver sommer</p>
+          <h2 data-i18n="slide1.title">Sommerfest ved Havnen</h2>
+          <p data-i18n="slide1.text">Livemusik, fadøl og solnedgang over kajen — hele Tejn samles til den årlige sommerfest.</p>
         </div>
       </div>
 
       <div class="slide" data-index="1">
-        <img src="images/oelfestival-stout.jpg" alt="Mørk stout på bord med udsigt over havnen">
+        <img src="images/oelfestival-stout.jpg" alt="Mørk stout på bord med udsigt over havnen" data-i18n-alt="slide2.alt">
         <div class="slide-caption">
-          <p class="eyebrow">August</p>
-          <h2>Ølfestival</h2>
-          <p>Smag dig gennem hele sortimentet på én dag — fra klassikere til eksperimenter fra fadkælderen.</p>
+          <p class="eyebrow" data-i18n="slide2.eyebrow">August</p>
+          <h2 data-i18n="slide2.title">Ølfestival</h2>
+          <p data-i18n="slide2.text">Smag dig gennem hele sortimentet på én dag — fra klassikere til eksperimenter fra fadkælderen.</p>
         </div>
       </div>
 
       <div class="slide" data-index="2">
-        <img src="images/levende-musik-krus.jpg" alt="Beer Here krus på tønde med lyskæder">
+        <img src="images/levende-musik-krus.jpg" alt="Beer Here krus på tønde med lyskæder" data-i18n-alt="slide3.alt">
         <div class="slide-caption">
-          <p class="eyebrow">Udvalgte fredage</p>
-          <h2>Levende Musik i Tapstuen</h2>
-          <p>Lokale bands spiller til en øl og godt selskab med udsigt over havnen.</p>
+          <p class="eyebrow" data-i18n="slide3.eyebrow">Udvalgte fredage</p>
+          <h2 data-i18n="slide3.title">Levende Musik i Tapstuen</h2>
+          <p data-i18n="slide3.text">Lokale bands spiller til en øl og godt selskab med udsigt over havnen.</p>
         </div>
       </div>
 
       <div class="slide" data-index="3">
-        <img src="images/julefrokost-skilt-sne.jpg" alt="Penyllan-skilt i sne med lyskæder om aftenen">
+        <img src="images/julefrokost-skilt-sne.jpg" alt="Penyllan-skilt i sne med lyskæder om aftenen" data-i18n-alt="slide4.alt">
         <div class="slide-caption">
-          <p class="eyebrow">December</p>
-          <h2>Julefrokost i Bryggeriet</h2>
-          <p>Hygge, glögg og julesnaps blandt bryggekedlerne, når mørket falder på.</p>
+          <p class="eyebrow" data-i18n="slide4.eyebrow">December</p>
+          <h2 data-i18n="slide4.title">Julefrokost i Bryggeriet</h2>
+          <p data-i18n="slide4.text">Hygge, glögg og julesnaps blandt bryggekedlerne, når mørket falder på.</p>
         </div>
       </div>
 
       <div class="slide" data-index="4">
-        <img src="images/nytaarsfest-baal.jpg" alt="Bålfad på terrassen ved havnen om aftenen">
+        <img src="images/nytaarsfest-baal.jpg" alt="Bålfad på terrassen ved havnen om aftenen" data-i18n-alt="slide5.alt">
         <div class="slide-caption">
-          <p class="eyebrow">31. december</p>
-          <h2>Nytårsfest på Kajen</h2>
-          <p>Fyrværkeri, bobler og bobler af øl, når vi fejrer nytår sammen med havnen som kulisse.</p>
+          <p class="eyebrow" data-i18n="slide5.eyebrow">31. december</p>
+          <h2 data-i18n="slide5.title">Nytårsfest på Kajen</h2>
+          <p data-i18n="slide5.text">Fyrværkeri, bobler og bobler af øl, når vi fejrer nytår sammen med havnen som kulisse.</p>
         </div>
       </div>
 
     </div>
 
-    <button class="carousel-arrow prev" id="carousel-prev" aria-label="Forrige billede">&#10094;</button>
-    <button class="carousel-arrow next" id="carousel-next" aria-label="Næste billede">&#10095;</button>
+    <button class="carousel-arrow prev" id="carousel-prev" aria-label="Forrige billede" data-i18n-aria="carousel.prev">&#10094;</button>
+    <button class="carousel-arrow next" id="carousel-next" aria-label="Næste billede" data-i18n-aria="carousel.next">&#10095;</button>
 
     <div class="carousel-dots" id="carousel-dots"></div>
 
-    <span class="badge-status" id="open-status">Tjek Facebook for åbningstider</span>
+    <span class="badge-status" id="open-status" data-i18n="status.checkFacebook">Tjek Facebook for åbningstider</span>
   </section>
 
   <section id="om" class="section">
     <div class="container two-col">
       <div>
-        <h2>Velkommen</h2>
-        <p>
+        <h2 data-i18n="welcome.title">Velkommen</h2>
+        <p data-i18n-html="welcome.text">
           Hvis flaget er ude, betyder det, at vi har åbent — så er du altid velkommen til at kigge ind på en øl.
           Hen over året holder vi desuden en række events. Følg med på vores
           <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
@@ -104,7 +111,7 @@
         </p>
       </div>
       <div class="image-frame">
-        <img src="images/om-traepynt.jpg" alt="Pyntet træ med lyskæder og tønder i bryggeriet">
+        <img src="images/om-traepynt.jpg" alt="Pyntet træ med lyskæder og tønder i bryggeriet" data-i18n-alt="welcome.imgAlt">
       </div>
     </div>
   </section>
@@ -112,27 +119,27 @@
   <section id="aabningstider" class="section alt">
     <div class="container two-col">
       <div>
-        <h2>Åbningstider</h2>
+        <h2 data-i18n="hours.title">Åbningstider</h2>
         <table class="hours-table">
           <tbody>
-            <tr><th>Alle dage</th><td>11 – 21</td></tr>
+            <tr><th data-i18n="hours.everyday">Alle dage</th><td>11 – 21</td></tr>
           </tbody>
         </table>
-        <p class="note">
+        <p class="note" data-i18n-html="hours.note">
           Tjek vores <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
           for eventuelle ændringer i åbningstiderne.
         </p>
       </div>
       <div>
-        <h2>Betaling</h2>
-        <p>Vi tager imod Dankort, VISA og Mastercard, samt MobilePay og kontant.</p>
+        <h2 data-i18n="payment.title">Betaling</h2>
+        <p data-i18n="payment.text">Vi tager imod Dankort, VISA og Mastercard, samt MobilePay og kontant.</p>
         <div class="card-logos">
           <img src="images/payment-dankort.png" alt="Dankort">
           <img src="images/payment-visa.svg" alt="VISA">
           <img src="images/payment-mastercard.svg" alt="Mastercard">
           <img src="images/payment-mobilepay.svg" alt="MobilePay">
         </div>
-        <p class="note">
+        <p class="note" data-i18n="payment.note">
           Ved betaling med kontant tager vi imod danske og svenske kroner samt euro.
           For euro og svenske kroner bruger vi dagskursen uden gebyr eller nedskrivning af kursen.
         </p>
@@ -143,26 +150,26 @@
   <section id="mad" class="section">
     <div class="container two-col reverse">
       <div>
-        <h2>Mad &amp; Snacks</h2>
-        <p>
+        <h2 data-i18n="food.title">Mad &amp; Snacks</h2>
+        <p data-i18n-html="food.text">
           Vi serverer hjemmelavede burgere og sprøde pommes frites — også en vegetarisk burger.
           Året rundt har vi desuden et udvalg af lækre <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.
         </p>
-        <p class="note">
+        <p class="note" data-i18n-html="food.note">
           Følg vores <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
           for flere detaljer om mad og events.
         </p>
       </div>
       <div class="image-frame">
-        <img src="images/mad-hotdog-oel.jpg" alt="Hotdog med tilbehør og et glas Beer Here">
+        <img src="images/mad-hotdog-oel.jpg" alt="Hotdog med tilbehør og et glas Beer Here" data-i18n-alt="food.imgAlt">
       </div>
     </div>
   </section>
 
   <section id="arrangementer" class="section alt">
     <div class="container">
-      <h2>Arrangementer</h2>
-      <p class="section-intro">
+      <h2 data-i18n="events.title">Arrangementer</h2>
+      <p class="section-intro" data-i18n-html="events.intro">
         Vi holder løbende events i bar og butik — her er et udpluk. Se altid vores
         <a href="https://www.facebook.com/penyllanbarandshop/events" target="_blank" rel="noopener">Facebook-side</a>
         for datoer og detaljer.
@@ -171,89 +178,89 @@
       <div class="event-grid">
         <article class="event-card">
           <div class="event-image">
-            <img src="images/fredagsbar-traelys.jpg" alt="Hyggeligt aftenmiljø med tønder og lyskæder">
+            <img src="images/fredagsbar-traelys.jpg" alt="Hyggeligt aftenmiljø med tønder og lyskæder" data-i18n-alt="event1.alt">
           </div>
           <div class="event-body">
-            <p class="event-date">Udvalgte fredage</p>
-            <h3>Fredagsbar med Levende Musik</h3>
-            <p>Lokale musikere spiller i tapstuen, mens solen går ned over havnen.</p>
+            <p class="event-date" data-i18n="event1.date">Udvalgte fredage</p>
+            <h3 data-i18n="event1.title">Fredagsbar med Levende Musik</h3>
+            <p data-i18n="event1.text">Lokale musikere spiller i tapstuen, mens solen går ned over havnen.</p>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-image">
-            <img src="images/sommerfest-skaal.jpg" alt="Gæster skåler sammen i bryggeriet">
+            <img src="images/sommerfest-skaal.jpg" alt="Gæster skåler sammen i bryggeriet" data-i18n-alt="event2.alt">
           </div>
           <div class="event-body">
-            <p class="event-date">Juli</p>
-            <h3>Sommerfest ved Havnen</h3>
-            <p>Musik, mad og masser af fadøl på kajen — årets store sommerevent.</p>
+            <p class="event-date" data-i18n="event2.date">Juli</p>
+            <h3 data-i18n="event2.title">Sommerfest ved Havnen</h3>
+            <p data-i18n="event2.text">Musik, mad og masser af fadøl på kajen — årets store sommerevent.</p>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-image">
-            <img src="images/oelfestival-pris.jpg" alt="Penyllan modtager Dansk Ølmærke 2026">
+            <img src="images/oelfestival-pris.jpg" alt="Penyllan modtager Dansk Ølmærke 2026" data-i18n-alt="event3.alt">
           </div>
           <div class="event-body">
-            <p class="event-date">August</p>
-            <h3>Ølfestival</h3>
-            <p>Smag hele sortimentet på én dag, inklusive specialbryg fra fadkælderen.</p>
+            <p class="event-date" data-i18n="event3.date">August</p>
+            <h3 data-i18n="event3.title">Ølfestival</h3>
+            <p data-i18n="event3.text">Smag hele sortimentet på én dag, inklusive specialbryg fra fadkælderen.</p>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-image">
-            <img src="images/julefrokost-aaben-skilt.jpg" alt="Penyllan Bryggeri skilt i sne om aftenen">
+            <img src="images/julefrokost-aaben-skilt.jpg" alt="Penyllan Bryggeri skilt i sne om aftenen" data-i18n-alt="event4.alt">
           </div>
           <div class="event-body">
-            <p class="event-date">December</p>
-            <h3>Julefrokost i Bryggeriet</h3>
-            <p>Hygge, glögg og julesnaps mellem bryggekedlerne.</p>
+            <p class="event-date" data-i18n="event4.date">December</p>
+            <h3 data-i18n="event4.title">Julefrokost i Bryggeriet</h3>
+            <p data-i18n="event4.text">Hygge, glögg og julesnaps mellem bryggekedlerne.</p>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-image">
-            <img src="images/om-traepynt.jpg" alt="Pyntet træ med lyskæder i bryggeriet">
+            <img src="images/om-traepynt.jpg" alt="Pyntet træ med lyskæder i bryggeriet" data-i18n-alt="event5.alt">
           </div>
           <div class="event-body">
-            <p class="event-date">April</p>
-            <h3>Påskebryg &amp; Rundvisning</h3>
-            <p>Sæsonens påskeøl smages sammen med en tur rundt i bryggeriet.</p>
+            <p class="event-date" data-i18n="event5.date">April</p>
+            <h3 data-i18n="event5.title">Påskebryg &amp; Rundvisning</h3>
+            <p data-i18n="event5.text">Sæsonens påskeøl smages sammen med en tur rundt i bryggeriet.</p>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-image">
-            <img src="images/oelfestival-stout.jpg" alt="Mørk øl på bord med udsigt over havnen">
+            <img src="images/oelfestival-stout.jpg" alt="Mørk øl på bord med udsigt over havnen" data-i18n-alt="event6.alt">
           </div>
           <div class="event-body">
-            <p class="event-date">Løbende hele året</p>
-            <h3>Ny Årgang på Fad</h3>
-            <p>Vi tapper løbende nye specialbryg — følg med på Facebook for hvad der lige nu står på hanerne.</p>
+            <p class="event-date" data-i18n="event6.date">Løbende hele året</p>
+            <h3 data-i18n="event6.title">Ny Årgang på Fad</h3>
+            <p data-i18n="event6.text">Vi tapper løbende nye specialbryg — følg med på Facebook for hvad der lige nu står på hanerne.</p>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-image">
-            <img src="images/levende-musik-krus.jpg" alt="Ølkrus på tønde med lyskæder om aftenen">
+            <img src="images/levende-musik-krus.jpg" alt="Ølkrus på tønde med lyskæder om aftenen" data-i18n-alt="event7.alt">
           </div>
           <div class="event-body">
-            <p class="event-date">Oktober</p>
-            <h3>Whisky &amp; Øl Aften</h3>
-            <p>En hyggelig aften med smagning af fadlagrede specialøl og udvalgte whiskyer.</p>
+            <p class="event-date" data-i18n="event7.date">Oktober</p>
+            <h3 data-i18n="event7.title">Whisky &amp; Øl Aften</h3>
+            <p data-i18n="event7.text">En hyggelig aften med smagning af fadlagrede specialøl og udvalgte whiskyer.</p>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-image">
-            <img src="images/nytaarsfest-baal.jpg" alt="Bålfad på terrassen ved havnen om aftenen">
+            <img src="images/nytaarsfest-baal.jpg" alt="Bålfad på terrassen ved havnen om aftenen" data-i18n-alt="event8.alt">
           </div>
           <div class="event-body">
-            <p class="event-date">31. december</p>
-            <h3>Nytårsbrag på Kajen</h3>
-            <p>Vi fejrer det nye år med bobler, bål og fyrværkeri over havnen.</p>
+            <p class="event-date" data-i18n="event8.date">31. december</p>
+            <h3 data-i18n="event8.title">Nytårsbrag på Kajen</h3>
+            <p data-i18n="event8.text">Vi fejrer det nye år med bobler, bål og fyrværkeri over havnen.</p>
           </div>
         </article>
       </div>
@@ -262,49 +269,49 @@
 
   <section id="tours" class="section">
     <div class="container">
-      <h2>Rundvisning &amp; Ølsmagning</h2>
+      <h2 data-i18n="tours.title">Rundvisning &amp; Ølsmagning</h2>
 
       <div class="tour-grid">
         <article class="tour-card">
           <div class="tour-image">
-            <img src="images/oelfestival-stout.jpg" alt="Smagning af mørk øl på bryggeriet">
+            <img src="images/oelfestival-stout.jpg" alt="Smagning af mørk øl på bryggeriet" data-i18n-alt="tour1.alt">
           </div>
-          <h3>Den lange tur</h3>
-          <p>
+          <h3 data-i18n="tour1.title">Den lange tur</h3>
+          <p data-i18n="tour1.text">
             En og en halv time i selskab med bryggeriets ejere, mens øllet flyder frit.
             Du bliver guidet rundt på bryggeriet, mens du smager øllene og hører historier
             om bryggeriets og øllets historie. Vi brygger endda en lille øl undervejs.
             Turen slutter i fadkælderen, hvor vi fortæller om vild gæring og fadlagring.
           </p>
-          <p class="note">Vi anbefaler ikke at køre bil bagefter. Vi har alkoholfrie alternativer, hvis du ikke drikker øl.</p>
-          <p class="note">Turen er på dansk, med de sidste 30 minutter på engelsk.</p>
-          <p class="price">250 kr. pr. person</p>
+          <p class="note" data-i18n="tour1.note1">Vi anbefaler ikke at køre bil bagefter. Vi har alkoholfrie alternativer, hvis du ikke drikker øl.</p>
+          <p class="note" data-i18n="tour1.note2">Turen er på dansk, med de sidste 30 minutter på engelsk.</p>
+          <p class="price" data-i18n="tour1.price">250 kr. pr. person</p>
         </article>
 
         <article class="tour-card">
           <div class="tour-image">
-            <img src="images/levende-musik-krus.jpg" alt="Ølkrus på tønde i tapstuen">
+            <img src="images/levende-musik-krus.jpg" alt="Ølkrus på tønde i tapstuen" data-i18n-alt="tour2.alt">
           </div>
-          <h3>Den korte tur</h3>
-          <p>
+          <h3 data-i18n="tour2.title">Den korte tur</h3>
+          <p data-i18n="tour2.text">
             Har du ikke tid til den lange tur, anbefaler vi den korte version.
             Vores brygger tager dig gennem en smagning af udvalgte øl og en rundvisning på bryggeriet,
             mens han fortæller om øl-brygning og bryggeriets historie.
           </p>
-          <p class="note">Turen er på dansk. Alkoholfrie alternativer kan tilbydes.</p>
-          <p class="price">190 kr. pr. person</p>
+          <p class="note" data-i18n="tour2.note">Turen er på dansk. Alkoholfrie alternativer kan tilbydes.</p>
+          <p class="price" data-i18n="tour2.price">190 kr. pr. person</p>
         </article>
 
         <article class="tour-card">
           <div class="tour-image">
-            <img src="images/sommerfest-skaal.jpg" alt="Gæster skåler sammen under rundvisning">
+            <img src="images/sommerfest-skaal.jpg" alt="Gæster skåler sammen under rundvisning" data-i18n-alt="tour3.alt">
           </div>
-          <h3>Private ture</h3>
-          <p>
+          <h3 data-i18n="tour3.title">Private ture</h3>
+          <p data-i18n="tour3.text">
             Kan du ikke deltage på en af vores faste turdage, kan du booke en privat tur.
             Prisen er 250 kr. pr. person (minimum 10 personer / 2.500 kr.) for den lange tur.
           </p>
-          <p class="note">
+          <p class="note" data-i18n-html="tour3.note">
             Ønsker du en kortere tur, eller er I mere end 20 personer, så
             <a href="mailto:jessica@penyllan.com">kontakt os</a> for en specialpris.
             Ture kan arrangeres på dansk eller engelsk.
@@ -312,7 +319,7 @@
         </article>
       </div>
 
-      <p class="callout">
+      <p class="callout" data-i18n-html="tours.callout">
         Booking er ikke nødvendig — køb blot din billet i baren.
         Kommende datoer for de faste ture finder du løbende på vores
         <a href="https://www.facebook.com/penyllanbarandshop/events" target="_blank" rel="noopener">Facebook-side</a>.
@@ -323,21 +330,21 @@
   <section id="kontakt" class="section alt">
     <div class="container two-col">
       <div>
-        <h2>Kontakt</h2>
-        <p>
+        <h2 data-i18n="contact.title">Kontakt</h2>
+        <p data-i18n-html="contact.text">
           Skriv til os på <a href="mailto:jessica@penyllan.com">jessica@penyllan.com</a>
           eller send en <a href="https://m.me/penyllan" target="_blank" rel="noopener">Facebook-besked</a>.
         </p>
-        <h3>Adresse</h3>
+        <h3 data-i18n="contact.address">Adresse</h3>
         <p>
           Penyllan Taproom<br>
           Vestkajen 5<br>
           3770 Allinge<br>
-          Danmark
+          <span data-i18n="contact.country">Danmark</span>
         </p>
       </div>
       <div>
-        <h3>Følg os</h3>
+        <h3 data-i18n="contact.follow">Følg os</h3>
         <ul class="social-list">
           <li><a href="https://www.facebook.com/penyllan" target="_blank" rel="noopener">Facebook</a></li>
           <li><a href="https://www.instagram.com/explore/locations/926824244/penyllan-brewery/?hl=en" target="_blank" rel="noopener">Instagram</a></li>
@@ -354,6 +361,7 @@
   </div>
 </footer>
 
+<script src="translations.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

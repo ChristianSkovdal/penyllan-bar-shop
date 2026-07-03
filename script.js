@@ -83,16 +83,78 @@ const CLOSE_HOUR = 21;
 
 const statusEl = document.getElementById('open-status');
 
-if (statusEl) {
+function updateOpenStatus(lang) {
+  if (!statusEl) return;
+  const dict = (window.translations && window.translations[lang]) || {};
   const now = new Date();
   const hour = now.getHours();
   const isOpen = hour >= OPEN_HOUR && hour < CLOSE_HOUR;
 
+  statusEl.classList.remove('open', 'closed');
+
   if (isOpen) {
-    statusEl.textContent = 'Åbent nu · 11-21';
+    statusEl.textContent = dict['status.open'] || 'Åbent nu · 11-21';
     statusEl.classList.add('open');
   } else {
-    statusEl.textContent = 'Lukket nu · Åbner kl. 11';
+    statusEl.textContent = dict['status.closed'] || 'Lukket nu · Åbner kl. 11';
     statusEl.classList.add('closed');
   }
 }
+
+// Language switcher
+(function () {
+  const STORAGE_KEY = 'penyllan-lang';
+  const DEFAULT_LANG = 'da';
+  const switcher = document.getElementById('lang-switcher');
+
+  function applyLanguage(lang) {
+    const dict = (window.translations && window.translations[lang]) || (window.translations && window.translations[DEFAULT_LANG]);
+    if (!dict) return;
+
+    document.documentElement.setAttribute('lang', lang);
+
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+
+    document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-alt');
+      if (dict[key] !== undefined) el.setAttribute('alt', dict[key]);
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-aria');
+      if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+    });
+
+    if (switcher) {
+      switcher.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
+      });
+    }
+
+    updateOpenStatus(lang);
+    localStorage.setItem(STORAGE_KEY, lang);
+  }
+
+  if (switcher) {
+    switcher.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+    });
+  }
+
+  let savedLang = DEFAULT_LANG;
+  try {
+    savedLang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
+  } catch (e) {
+    savedLang = DEFAULT_LANG;
+  }
+
+  applyLanguage(savedLang);
+})();
