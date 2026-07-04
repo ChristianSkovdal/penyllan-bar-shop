@@ -5,9 +5,12 @@ window.translations = {
     "nav.hours": "Åbningstider",
     "nav.food": "Mad",
     "nav.events": "Arrangementer",
+    "nav.privateEvents": "Private events",
+    "nav.fadol": "Fadøl",
     "nav.tours": "Ølsmagning",
     "nav.contact": "Kontakt",
     "nav.toggle": "Åbn menu",
+    "nav.chooseLang": "Vælg sprog",
 
     "carousel.ariaLabel": "Billeder fra arrangementer og fester",
     "carousel.prev": "Forrige billede",
@@ -42,9 +45,15 @@ window.translations = {
     "slide5.title": "Nytårsfest på Kajen",
     "slide5.text": "Fyrværkeri, bobler og bobler af øl, når vi fejrer nytår sammen med havnen som kulisse.",
 
+    "slide6.alt": "Oktoberfest-plakat med ølkrus, skum og kringler",
+    "slide6.eyebrow": "26. september",
+    "slide6.title": "Oktoberfest",
+    "slide6.text": "Tysk-inspireret mad, vores egen Oktoberfest-øl og fest i biergarten — glæd dig til Penyllans tredje Oktoberfest.",
+
     "welcome.title": "Velkommen",
     "welcome.text": `Hvis flaget er ude, betyder det, at vi har åbent — så er du altid velkommen til at kigge ind på en øl.
-          Hen over året holder vi desuden en række events. Følg med på vores
+          Vi har åbent hele året, også hele vinteren, hvor vi blandt andet holder fællesspisning,
+          biografaftener med gratis adgang, foredrag og musik. Følg med på vores
           <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
           for datoer, ændringer i åbningstider og detaljer om mad og arrangementer.`,
     "welcome.imgAlt": "Pyntet træ med lyskæder og tønder i bryggeriet",
@@ -61,7 +70,8 @@ window.translations = {
 
     "food.title": "Mad & Snacks",
     "food.text": `Vi serverer hjemmelavede burgere og sprøde pommes frites — også en vegetarisk burger.
-          Året rundt har vi desuden et udvalg af lækre <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.`,
+          Året rundt har vi desuden et udvalg af lækre <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.
+          Om vinteren holder vi derudover fællesspisning og Sunday Roast.`,
     "food.note": `Følg vores <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
           for flere detaljer om mad og events.`,
     "food.imgAlt": "Hotdog med tilbehør og et glas Beer Here",
@@ -111,6 +121,40 @@ window.translations = {
     "event8.title": "Nytårsbrag på Kajen",
     "event8.text": "Vi fejrer det nye år med bobler, bål og fyrværkeri over havnen.",
 
+    "event9.alt": "Oktoberfest-plakat med ølkrus, skum og kringler",
+    "event9.date": "26. september 2026",
+    "event9.title": "Oktoberfest",
+    "event9.text": "Vi holder Penyllans tredje Oktoberfest! Glæd dig til en dag med festligt selskab, mættende tysk-inspireret mad og selvfølgelig vores helt egen Oktoberfest-øl.",
+    "event9.linkText": "Læs mere",
+    "event9.modalTitle": "Oktoberfest",
+    "event9.modalText": `<p>🍻 Lørdag d. 26. september slår vi dørene op til Penyllans tredje Oktoberfest! Glæd dig til en dag med festligt selskab, mættende tysk-inspireret mad og selvfølgelig vores helt egen Oktoberfest-øl brygget til lejligheden.</p>
+        <p>☀️ Hvis vejret er godt, rykker vi festen ud i vores nye biergarten med udsigt over Østersøen. Er vejret imod os, fortsætter vi indenfor i baren, hvor der også serveres øl fra hanerne, vin, most, cocktails og sodavand.</p>
+        <p>🎶 Hele aftenen vil der være masser af tysk musik, god stemning og masser af skål og skrål!</p>
+        <p>🕔 Festen starter kl. 17 – og vi bliver ved, til vi løber tør for øl.</p>
+        <p><strong>🍽️ Menu:</strong></p>
+        <ul>
+          <li>🥨 En stor tallerken med "pretzel" saltkringle, en god ristet pølse og krydret sauerkraut — selvfølgelig med grov hjemmelavet sennep til.</li>
+          <li>🧀 Fra Gudhjem kommer Carraig Grilled Cheese med en speciallavet Oktoberfest-sandwich.</li>
+        </ul>
+        <p>🎉 Gratis adgang – kom og vær med til en aften, vi sent vil glemme!</p>
+        <p>🎁 <strong>Bonus:</strong> Til alle der kommer klædt i lederhosen eller dirndl skænker vi en hel Maß (1 liter) til prisen af en almindelig (0,4 liter) øl — eller en almindelig størrelse til prisen af en lille øl.</p>`,
+
+    "privateEvents.title": "Private events",
+    "privateEvents.text": `Vores lokaler og biergarten kan lejes til private fester og arrangementer — fødselsdage, firmafester,
+          jubilæer og meget andet. Skriv til os på <a href="mailto:jessica@penyllan.com">jessica@penyllan.com</a>
+          for et uforpligtende tilbud.`,
+    "privateEvents.imgAlt": "Hyggeligt lokale med tønder og lyskæder, velegnet til private fester",
+
+    "fadol.title": "Fadøl",
+    "fadol.text": "Du kan leje et fadølsanlæg til din fest for 350 kr. pr. døgn.",
+    "fadol.linkText": "Klik for detaljer",
+    "fadol.imgAlt": "Bærbart fadølsanlæg med to haner",
+    "fadol.modalTitle": "Leje af fadølsanlæg",
+    "fadol.modalText": `<p>Fadølsanlægget har to haner og koster 350 kr. pr. døgn.</p>
+        <p>Du kan selv hente og aflevere anlægget, eller vi kan stå for det for 150–250 kr, afhængig af hvor på Bornholm det skal leveres.</p>
+        <p>Fadøl kan tilkøbes for 40–50 kr. pr. liter, afhængig af type, og du er altid velkommen til at låne glas gratis.</p>`,
+    "fadol.close": "Luk",
+
     "tours.title": "Rundvisning & Ølsmagning",
 
     "tour1.alt": "Smagning af mørk øl på bryggeriet",
@@ -155,9 +199,12 @@ window.translations = {
     "nav.hours": "Opening Hours",
     "nav.food": "Food",
     "nav.events": "Events",
+    "nav.privateEvents": "Private Events",
+    "nav.fadol": "Draft Beer",
     "nav.tours": "Beer Tasting",
     "nav.contact": "Contact",
     "nav.toggle": "Open menu",
+    "nav.chooseLang": "Choose language",
 
     "carousel.ariaLabel": "Photos from events and parties",
     "carousel.prev": "Previous image",
@@ -192,9 +239,15 @@ window.translations = {
     "slide5.title": "New Year's Party at the Quay",
     "slide5.text": "Fireworks, bubbly and bubbles of beer as we celebrate New Year with the harbour as our backdrop.",
 
+    "slide6.alt": "Oktoberfest poster with a beer mug, foam and pretzels",
+    "slide6.eyebrow": "26 September",
+    "slide6.title": "Oktoberfest",
+    "slide6.text": "German-inspired food, our own Oktoberfest beer and a party in the beer garden — look forward to Penyllan's third Oktoberfest.",
+
     "welcome.title": "Welcome",
     "welcome.text": `If the flag is out, it means we're open — so you're always welcome to drop by for a beer.
-          Throughout the year we also hold a number of events. Follow our
+          We're open all year round, including throughout the winter, when we hold communal dinners,
+          movie nights with free admission, talks and live music, among other things. Follow our
           <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook page</a>
           for dates, changes in opening hours and details about food and events.`,
     "welcome.imgAlt": "Decorated tree with fairy lights and barrels in the brewery",
@@ -211,7 +264,8 @@ window.translations = {
 
     "food.title": "Food & Snacks",
     "food.text": `We serve homemade burgers and crispy fries — including a vegetarian burger.
-          All year round we also have a selection of delicious <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.`,
+          All year round we also have a selection of delicious <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.
+          During the winter we also hold communal dinners and a Sunday Roast.`,
     "food.note": `Follow our <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook page</a>
           for more details about food and events.`,
     "food.imgAlt": "Hot dog with toppings and a glass of Beer Here",
@@ -261,6 +315,40 @@ window.translations = {
     "event8.title": "New Year's Bang at the Quay",
     "event8.text": "We celebrate the New Year with bubbly, bonfires and fireworks over the harbour.",
 
+    "event9.alt": "Oktoberfest poster with a beer mug, foam and pretzels",
+    "event9.date": "26 September 2026",
+    "event9.title": "Oktoberfest",
+    "event9.text": "We're holding Penyllan's third Oktoberfest! Look forward to a day of festive company, hearty German-inspired food and, of course, our very own Oktoberfest beer.",
+    "event9.linkText": "Read more",
+    "event9.modalTitle": "Oktoberfest",
+    "event9.modalText": `<p>🍻 On Saturday 26 September we open the doors to Penyllan's third Oktoberfest! Look forward to a day of festive company, hearty German-inspired food and, of course, our very own Oktoberfest beer, brewed especially for the occasion.</p>
+        <p>☀️ If the weather is good, we'll move the party out into our new beer garden with a view of the Baltic Sea. If the weather isn't on our side, we'll continue inside the bar, where we also serve draft beer, wine, cider, cocktails and soft drinks.</p>
+        <p>🎶 All evening there'll be plenty of German music, great atmosphere and lots of cheers and singing!</p>
+        <p>🕔 The party starts at 5pm — and we keep going until we run out of beer.</p>
+        <p><strong>🍽️ Menu:</strong></p>
+        <ul>
+          <li>🥨 A big plate with a pretzel, a good grilled sausage and spiced sauerkraut — of course served with coarse homemade mustard.</li>
+          <li>🧀 From Gudhjem comes Carraig Grilled Cheese with a specially made Oktoberfest sandwich.</li>
+        </ul>
+        <p>🎉 Free admission — come and be part of an evening we won't forget for a long time!</p>
+        <p>🎁 <strong>Bonus:</strong> Everyone who comes dressed in lederhosen or a dirndl gets a full Maß (1 litre) for the price of a regular (0.4 litre) beer, or a regular size for the price of a small beer.</p>`,
+
+    "privateEvents.title": "Private Events",
+    "privateEvents.text": `Our premises and beer garden can be rented for private parties and events — birthdays, company parties,
+          anniversaries and much more. Write to us at <a href="mailto:jessica@penyllan.com">jessica@penyllan.com</a>
+          for a no-obligation quote.`,
+    "privateEvents.imgAlt": "Cosy venue with barrels and fairy lights, well suited for private parties",
+
+    "fadol.title": "Draft Beer",
+    "fadol.text": "You can rent a draft beer system for your party for DKK 350 per day.",
+    "fadol.linkText": "Click for details",
+    "fadol.imgAlt": "Portable draft beer system with two taps",
+    "fadol.modalTitle": "Renting a draft beer system",
+    "fadol.modalText": `<p>The draft beer system has two taps and costs DKK 350 per day.</p>
+        <p>You can pick up and return the system yourself, or we can handle it for DKK 150–250, depending on where on Bornholm it needs to be delivered.</p>
+        <p>Draft beer can be purchased for DKK 40–50 per litre, depending on the type, and you're always welcome to borrow glasses free of charge.</p>`,
+    "fadol.close": "Close",
+
     "tours.title": "Tour & Beer Tasting",
 
     "tour1.alt": "Tasting dark beer at the brewery",
@@ -305,9 +393,12 @@ window.translations = {
     "nav.hours": "Öffnungszeiten",
     "nav.food": "Essen",
     "nav.events": "Veranstaltungen",
+    "nav.privateEvents": "Private Veranstaltungen",
+    "nav.fadol": "Fassbier",
     "nav.tours": "Bierverkostung",
     "nav.contact": "Kontakt",
     "nav.toggle": "Menü öffnen",
+    "nav.chooseLang": "Sprache wählen",
 
     "carousel.ariaLabel": "Bilder von Veranstaltungen und Festen",
     "carousel.prev": "Vorheriges Bild",
@@ -342,9 +433,15 @@ window.translations = {
     "slide5.title": "Silvesterparty am Kai",
     "slide5.text": "Feuerwerk, Sekt und Bierschaum, wenn wir Silvester mit dem Hafen als Kulisse feiern.",
 
+    "slide6.alt": "Oktoberfest-Plakat mit Bierkrug, Schaum und Brezeln",
+    "slide6.eyebrow": "26. September",
+    "slide6.title": "Oktoberfest",
+    "slide6.text": "Deutsch inspiriertes Essen, unser eigenes Oktoberfestbier und eine Feier im Biergarten — freuen Sie sich auf Penyllans drittes Oktoberfest.",
+
     "welcome.title": "Willkommen",
     "welcome.text": `Wenn die Flagge draußen ist, haben wir geöffnet — Sie sind also jederzeit willkommen, auf ein Bier vorbeizuschauen.
-          Im Laufe des Jahres veranstalten wir außerdem eine Reihe von Events. Folgen Sie unserer
+          Wir haben das ganze Jahr über geöffnet, auch den ganzen Winter hindurch, in dem wir unter anderem
+          gemeinsames Essen, Kinoabende mit freiem Eintritt, Vorträge und Live-Musik anbieten. Folgen Sie unserer
           <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-Seite</a>
           für Termine, Änderungen der Öffnungszeiten und Details zu Essen und Veranstaltungen.`,
     "welcome.imgAlt": "Geschmückter Baum mit Lichterketten und Fässern in der Brauerei",
@@ -361,7 +458,8 @@ window.translations = {
 
     "food.title": "Essen & Snacks",
     "food.text": `Wir servieren hausgemachte Burger und knusprige Pommes frites — auch einen vegetarischen Burger.
-          Das ganze Jahr über haben wir außerdem eine Auswahl an leckeren <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> Kettle Chips.`,
+          Das ganze Jahr über haben wir außerdem eine Auswahl an leckeren <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> Kettle Chips.
+          Im Winter veranstalten wir außerdem gemeinsames Essen und einen Sunday Roast.`,
     "food.note": `Folgen Sie unserer <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-Seite</a>
           für weitere Details zu Essen und Veranstaltungen.`,
     "food.imgAlt": "Hotdog mit Beilagen und einem Glas Beer Here",
@@ -410,6 +508,40 @@ window.translations = {
     "event8.title": "Silvesterknall am Kai",
     "event8.text": "Wir feiern das neue Jahr mit Sekt, Lagerfeuer und Feuerwerk über dem Hafen.",
 
+    "event9.alt": "Oktoberfest-Plakat mit Bierkrug, Schaum und Brezeln",
+    "event9.date": "26. September 2026",
+    "event9.title": "Oktoberfest",
+    "event9.text": "Wir feiern Penyllans drittes Oktoberfest! Freuen Sie sich auf einen Tag voller geselliger Stimmung, herzhaftem, deutsch inspiriertem Essen und natürlich unserem eigenen Oktoberfestbier.",
+    "event9.linkText": "Mehr erfahren",
+    "event9.modalTitle": "Oktoberfest",
+    "event9.modalText": `<p>🍻 Am Samstag, den 26. September, öffnen wir die Türen zu Penyllans drittem Oktoberfest! Freuen Sie sich auf einen Tag voller geselliger Stimmung, herzhaftem, deutsch inspiriertem Essen und natürlich unserem eigenen, extra für den Anlass gebrauten Oktoberfestbier.</p>
+        <p>☀️ Bei gutem Wetter verlegen wir das Fest in unseren neuen Biergarten mit Blick auf die Ostsee. Bei schlechtem Wetter feiern wir drinnen in der Bar weiter, wo auch Bier vom Fass, Wein, Most, Cocktails und Softdrinks serviert werden.</p>
+        <p>🎶 Den ganzen Abend gibt es jede Menge deutsche Musik, gute Stimmung und viel Prost und Gesang!</p>
+        <p>🕔 Das Fest beginnt um 17 Uhr — und wir machen weiter, bis uns das Bier ausgeht.</p>
+        <p><strong>🍽️ Menü:</strong></p>
+        <ul>
+          <li>🥨 Ein großer Teller mit Brezel, einer guten gegrillten Wurst und würzigem Sauerkraut — natürlich mit grobem, hausgemachtem Senf dazu.</li>
+          <li>🧀 Aus Gudhjem kommt Carraig Grilled Cheese mit einem eigens kreierten Oktoberfest-Sandwich.</li>
+        </ul>
+        <p>🎉 Freier Eintritt – seien Sie dabei bei einem Abend, den wir so schnell nicht vergessen werden!</p>
+        <p>🎁 <strong>Bonus:</strong> Alle, die in Lederhosen oder Dirndl kommen, erhalten eine ganze Maß (1 Liter) zum Preis eines normalen (0,4 Liter) Bieres oder eine normale Größe zum Preis eines kleinen Bieres.</p>`,
+
+    "privateEvents.title": "Private Veranstaltungen",
+    "privateEvents.text": `Unsere Räumlichkeiten und der Biergarten können für private Feiern und Veranstaltungen gemietet werden —
+          Geburtstage, Firmenfeiern, Jubiläen und vieles mehr. Schreiben Sie uns an
+          <a href="mailto:jessica@penyllan.com">jessica@penyllan.com</a> für ein unverbindliches Angebot.`,
+    "privateEvents.imgAlt": "Gemütliches Lokal mit Fässern und Lichterketten, gut geeignet für private Feiern",
+
+    "fadol.title": "Fassbier",
+    "fadol.text": "Sie können eine Zapfanlage für Ihre Feier für 350 DKK pro Tag mieten.",
+    "fadol.linkText": "Für Details klicken",
+    "fadol.imgAlt": "Tragbare Zapfanlage mit zwei Hähnen",
+    "fadol.modalTitle": "Zapfanlage mieten",
+    "fadol.modalText": `<p>Die Zapfanlage hat zwei Hähne und kostet 350 DKK pro Tag.</p>
+        <p>Sie können die Anlage selbst abholen und zurückbringen, oder wir übernehmen dies für 150–250 DKK, je nachdem, wohin auf Bornholm sie geliefert werden muss.</p>
+        <p>Fassbier kann je nach Sorte für 40–50 DKK pro Liter dazugekauft werden, und Sie können jederzeit kostenlos Gläser ausleihen.</p>`,
+    "fadol.close": "Schließen",
+
     "tours.title": "Führung & Bierverkostung",
 
     "tour1.alt": "Verkostung von dunklem Bier in der Brauerei",
@@ -454,9 +586,12 @@ window.translations = {
     "nav.hours": "Godziny otwarcia",
     "nav.food": "Jedzenie",
     "nav.events": "Wydarzenia",
+    "nav.privateEvents": "Prywatne wydarzenia",
+    "nav.fadol": "Piwo z beczki",
     "nav.tours": "Degustacja piwa",
     "nav.contact": "Kontakt",
     "nav.toggle": "Otwórz menu",
+    "nav.chooseLang": "Wybierz język",
 
     "carousel.ariaLabel": "Zdjęcia z wydarzeń i imprez",
     "carousel.prev": "Poprzednie zdjęcie",
@@ -491,9 +626,15 @@ window.translations = {
     "slide5.title": "Sylwestrowa impreza na nabrzeżu",
     "slide5.text": "Fajerwerki, szampan i piwna piana, gdy świętujemy Nowy Rok na tle portu.",
 
+    "slide6.alt": "Plakat Oktoberfest z kuflem piwa, pianą i preclami",
+    "slide6.eyebrow": "26 września",
+    "slide6.title": "Oktoberfest",
+    "slide6.text": "Jedzenie inspirowane kuchnią niemiecką, nasze własne piwo Oktoberfest i impreza w ogródku piwnym — ciesz się trzecim Oktoberfestem w Penyllan.",
+
     "welcome.title": "Witamy",
     "welcome.text": `Jeśli flaga jest wywieszona, oznacza to, że mamy otwarte — więc zawsze możesz wpaść na piwo.
-          W ciągu roku organizujemy też szereg wydarzeń. Śledź naszą
+          Mamy otwarte przez cały rok, także przez całą zimę, kiedy organizujemy między innymi wspólne posiłki,
+          wieczory filmowe z darmowym wstępem, prelekcje i muzykę na żywo. Śledź naszą
           <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">stronę na Facebooku</a>,
           aby poznać terminy, zmiany godzin otwarcia oraz szczegóły dotyczące jedzenia i wydarzeń.`,
     "welcome.imgAlt": "Ozdobione drzewko z lampkami i beczkami w browarze",
@@ -510,7 +651,8 @@ window.translations = {
 
     "food.title": "Jedzenie i przekąski",
     "food.text": `Serwujemy domowe burgery i chrupiące frytki — także burgera wegetariańskiego.
-          Przez cały rok mamy również wybór pysznych chipsów <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.`,
+          Przez cały rok mamy również wybór pysznych chipsów <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.
+          Zimą organizujemy również wspólne posiłki oraz Sunday Roast.`,
     "food.note": `Śledź naszą <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">stronę na Facebooku</a>,
           aby poznać więcej szczegółów o jedzeniu i wydarzeniach.`,
     "food.imgAlt": "Hot dog z dodatkami i szklanka Beer Here",
@@ -559,6 +701,40 @@ window.translations = {
     "event8.date": "31 grudnia",
     "event8.title": "Sylwestrowy huk na nabrzeżu",
     "event8.text": "Świętujemy Nowy Rok z szampanem, ogniskiem i fajerwerkami nad portem.",
+
+    "event9.alt": "Plakat Oktoberfest z kuflem piwa, pianą i preclami",
+    "event9.date": "26 września 2026",
+    "event9.title": "Oktoberfest",
+    "event9.text": "Organizujemy trzeci Oktoberfest w Penyllan! Ciesz się dniem pełnym radosnego towarzystwa, sycącego jedzenia inspirowanego kuchnią niemiecką i oczywiście naszym własnym piwem Oktoberfest.",
+    "event9.linkText": "Czytaj więcej",
+    "event9.modalTitle": "Oktoberfest",
+    "event9.modalText": `<p>🍻 W sobotę 26 września otwieramy drzwi na trzeci Oktoberfest w Penyllan! Ciesz się dniem pełnym radosnego towarzystwa, sycącego jedzenia inspirowanego kuchnią niemiecką i oczywiście naszym własnym piwem Oktoberfest, uwarzonym specjalnie na tę okazję.</p>
+        <p>☀️ Jeśli pogoda dopisze, przenosimy imprezę do naszego nowego ogródka piwnego z widokiem na Bałtyk. Jeśli pogoda nas zawiedzie, kontynuujemy w barze, gdzie serwujemy również piwo z kranu, wino, cydr, koktajle i napoje bezalkoholowe.</p>
+        <p>🎶 Przez cały wieczór będzie mnóstwo niemieckiej muzyki, świetna atmosfera oraz mnóstwo toastów i śpiewu!</p>
+        <p>🕔 Impreza zaczyna się o 17:00 — i trwa, dopóki nie skończy się piwo.</p>
+        <p><strong>🍽️ Menu:</strong></p>
+        <ul>
+          <li>🥨 Duży talerz z precelem, dobrze grillowaną kiełbasą i pikantną kiszoną kapustą — oczywiście z grubą, domową musztardą.</li>
+          <li>🧀 Z Gudhjem przyjeżdża Carraig Grilled Cheese ze specjalnie przygotowaną kanapką Oktoberfest.</li>
+        </ul>
+        <p>🎉 Wstęp wolny – dołącz do wieczoru, którego długo nie zapomnimy!</p>
+        <p>🎁 <strong>Bonus:</strong> Wszyscy, którzy przyjdą ubrani w lederhosen lub dirndl, otrzymają całą Maß (1 litr) w cenie zwykłego (0,4 litra) piwa, lub zwykły rozmiar w cenie małego piwa.</p>`,
+
+    "privateEvents.title": "Prywatne wydarzenia",
+    "privateEvents.text": `Nasze pomieszczenia i ogródek piwny można wynająć na prywatne przyjęcia i wydarzenia — urodziny,
+          imprezy firmowe, rocznice i wiele innych. Napisz do nas na adres
+          <a href="mailto:jessica@penyllan.com">jessica@penyllan.com</a>, aby otrzymać niezobowiązującą wycenę.`,
+    "privateEvents.imgAlt": "Przytulne wnętrze z beczkami i lampkami, idealne na prywatne przyjęcia",
+
+    "fadol.title": "Piwo z beczki",
+    "fadol.text": "Możesz wynająć instalację do piwa z beczki na swoją imprezę za 350 DKK za dobę.",
+    "fadol.linkText": "Kliknij po szczegóły",
+    "fadol.imgAlt": "Przenośna instalacja do piwa z beczki z dwoma kranami",
+    "fadol.modalTitle": "Wynajem instalacji do piwa z beczki",
+    "fadol.modalText": `<p>Instalacja do piwa z beczki ma dwa krany i kosztuje 350 DKK za dobę.</p>
+        <p>Możesz sam odebrać i zwrócić instalację, albo możemy zająć się tym za 150–250 DKK, w zależności od miejsca dostawy na Bornholmie.</p>
+        <p>Piwo z beczki można dokupić w cenie 40–50 DKK za litr, w zależności od rodzaju, a szklanki możesz zawsze pożyczyć bezpłatnie.</p>`,
+    "fadol.close": "Zamknij",
 
     "tours.title": "Zwiedzanie i degustacja piwa",
 

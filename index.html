@@ -8,6 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rye&family=Staatliches&family=Bitter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,20 +25,29 @@
       <a href="#aabningstider" data-i18n="nav.hours">Åbningstider</a>
       <a href="#mad" data-i18n="nav.food">Mad</a>
       <a href="#arrangementer" data-i18n="nav.events">Arrangementer</a>
+      <a href="#private-events" data-i18n="nav.privateEvents">Private events</a>
+      <a href="#fadol" data-i18n="nav.fadol">Fadøl</a>
       <a href="#tours" data-i18n="nav.tours">Ølsmagning</a>
       <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
     </nav>
 
-    <div class="lang-switcher" id="lang-switcher">
-      <button type="button" class="lang-btn is-active" data-lang="da" aria-label="Dansk" title="Dansk">🇩🇰</button>
-      <button type="button" class="lang-btn" data-lang="en" aria-label="English" title="English">🇬🇧</button>
-      <button type="button" class="lang-btn" data-lang="de" aria-label="Deutsch" title="Deutsch">🇩🇪</button>
-      <button type="button" class="lang-btn" data-lang="pl" aria-label="Polski" title="Polski">🇵🇱</button>
-    </div>
+    <div class="header-controls">
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button type="button" class="lang-current" id="lang-current-btn" aria-haspopup="true" aria-expanded="false" aria-label="Vælg sprog" data-i18n-aria="nav.chooseLang">
+          <span id="lang-current-flag">🇩🇰</span><span class="lang-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-menu" id="lang-menu" role="menu">
+          <li role="none"><button type="button" class="lang-option lang-btn is-active" data-lang="da" role="menuitem">🇩🇰 <span>Dansk</span></button></li>
+          <li role="none"><button type="button" class="lang-option lang-btn" data-lang="en" role="menuitem">🇬🇧 <span>English</span></button></li>
+          <li role="none"><button type="button" class="lang-option lang-btn" data-lang="de" role="menuitem">🇩🇪 <span>Deutsch</span></button></li>
+          <li role="none"><button type="button" class="lang-option lang-btn" data-lang="pl" role="menuitem">🇵🇱 <span>Polski</span></button></li>
+        </ul>
+      </div>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Åbn menu" data-i18n-aria="nav.toggle" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Åbn menu" data-i18n-aria="nav.toggle" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -89,6 +103,15 @@
         </div>
       </div>
 
+      <div class="slide slide--poster" data-index="5">
+        <img src="images/oktoberfest.jpg" alt="Oktoberfest-plakat med ølkrus, skum og kringler" data-i18n-alt="slide6.alt">
+        <div class="slide-caption">
+          <p class="eyebrow" data-i18n="slide6.eyebrow">26. september</p>
+          <h2 data-i18n="slide6.title">Oktoberfest</h2>
+          <p data-i18n="slide6.text">Tysk-inspireret mad, vores egen Oktoberfest-øl og fest i biergarten — glæd dig til Penyllans tredje Oktoberfest.</p>
+        </div>
+      </div>
+
     </div>
 
     <button class="carousel-arrow prev" id="carousel-prev" aria-label="Forrige billede" data-i18n-aria="carousel.prev">&#10094;</button>
@@ -105,10 +128,12 @@
         <h2 data-i18n="welcome.title">Velkommen</h2>
         <p data-i18n-html="welcome.text">
           Hvis flaget er ude, betyder det, at vi har åbent — så er du altid velkommen til at kigge ind på en øl.
-          Hen over året holder vi desuden en række events. Følg med på vores
+          Vi har åbent hele året, også hele vinteren, hvor vi blandt andet holder fællesspisning,
+          biografaftener med gratis adgang, foredrag og musik. Følg med på vores
           <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
           for datoer, ændringer i åbningstider og detaljer om mad og arrangementer.
         </p>
+        <img class="flag-icon" src="images/dannebrog.jpg" alt="Dansk flag på flagstang">
       </div>
       <div class="image-frame">
         <img src="images/om-traepynt.jpg" alt="Pyntet træ med lyskæder og tønder i bryggeriet" data-i18n-alt="welcome.imgAlt">
@@ -154,6 +179,7 @@
         <p data-i18n-html="food.text">
           Vi serverer hjemmelavede burgere og sprøde pommes frites — også en vegetarisk burger.
           Året rundt har vi desuden et udvalg af lækre <a href="https://www.piperscrisps.com/en" target="_blank" rel="noopener">Pipers</a> kettle chips.
+          Om vinteren holder vi derudover fællesspisning og Sunday Roast.
         </p>
         <p class="note" data-i18n-html="food.note">
           Følg vores <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
@@ -263,9 +289,86 @@
             <p data-i18n="event8.text">Vi fejrer det nye år med bobler, bål og fyrværkeri over havnen.</p>
           </div>
         </article>
+
+        <article class="event-card">
+          <div class="event-image">
+            <img src="images/oktoberfest.jpg" alt="Oktoberfest-plakat med ølkrus, skum og kringler" data-i18n-alt="event9.alt">
+          </div>
+          <div class="event-body">
+            <p class="event-date" data-i18n="event9.date">26. september 2026</p>
+            <h3 data-i18n="event9.title">Oktoberfest</h3>
+            <p data-i18n="event9.text">Vi holder Penyllans tredje Oktoberfest! Glæd dig til en dag med festligt selskab, mættende tysk-inspireret mad og selvfølgelig vores helt egen Oktoberfest-øl.</p>
+            <p>
+              <button type="button" class="link-button" id="oktoberfest-details-btn" data-i18n="event9.linkText">Læs mere</button>
+            </p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
+
+  <section id="private-events" class="section">
+    <div class="container two-col">
+      <div>
+        <h2 data-i18n="privateEvents.title">Private events</h2>
+        <p data-i18n-html="privateEvents.text">
+          Vores lokaler og biergarten kan lejes til private fester og arrangementer — fødselsdage, firmafester,
+          jubilæer og meget andet. Skriv til os på <a href="mailto:jessica@penyllan.com">jessica@penyllan.com</a>
+          for et uforpligtende tilbud.
+        </p>
+      </div>
+      <div class="image-frame">
+        <img src="images/fredagsbar-traelys.jpg" alt="Hyggeligt lokale med tønder og lyskæder, velegnet til private fester" data-i18n-alt="privateEvents.imgAlt">
+      </div>
+    </div>
+  </section>
+
+  <section id="fadol" class="section alt">
+    <div class="container two-col reverse">
+      <div>
+        <h2 data-i18n="fadol.title">Fadøl</h2>
+        <p data-i18n="fadol.text">Du kan leje et fadølsanlæg til din fest for 350 kr. pr. døgn.</p>
+        <p>
+          <button type="button" class="link-button" id="fadol-details-btn" data-i18n="fadol.linkText">Klik for detaljer</button>
+        </p>
+      </div>
+      <div class="image-frame">
+        <img src="images/fadølsanlæg.png" alt="Bærbart fadølsanlæg med to haner" data-i18n-alt="fadol.imgAlt">
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="fadol-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="fadol-modal-title">
+      <button type="button" class="modal-close" id="fadol-modal-close" aria-label="Luk" data-i18n-aria="fadol.close">&times;</button>
+      <h3 id="fadol-modal-title" data-i18n="fadol.modalTitle">Leje af fadølsanlæg</h3>
+      <div data-i18n-html="fadol.modalText">
+        <p>Fadølsanlægget har to haner og koster 350 kr. pr. døgn.</p>
+        <p>Du kan selv hente og aflevere anlægget, eller vi kan stå for det for 150–250 kr, afhængig af hvor på Bornholm det skal leveres.</p>
+        <p>Fadøl kan tilkøbes for 40–50 kr. pr. liter, afhængig af type, og du er altid velkommen til at låne glas gratis.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="oktoberfest-modal" hidden>
+    <div class="modal modal--wide" role="dialog" aria-modal="true" aria-labelledby="oktoberfest-modal-title">
+      <button type="button" class="modal-close" id="oktoberfest-modal-close" aria-label="Luk" data-i18n-aria="fadol.close">&times;</button>
+      <h3 id="oktoberfest-modal-title" data-i18n="event9.modalTitle">Oktoberfest</h3>
+      <div data-i18n-html="event9.modalText">
+        <p>🍻 Lørdag d. 26. september slår vi dørene op til Penyllans tredje Oktoberfest! Glæd dig til en dag med festligt selskab, mættende tysk-inspireret mad og selvfølgelig vores helt egen Oktoberfest-øl brygget til lejligheden.</p>
+        <p>☀️ Hvis vejret er godt, rykker vi festen ud i vores nye biergarten med udsigt over Østersøen. Er vejret imod os, fortsætter vi indenfor i baren, hvor der også serveres øl fra hanerne, vin, most, cocktails og sodavand.</p>
+        <p>🎶 Hele aftenen vil der være masser af tysk musik, god stemning og masser af skål og skrål!</p>
+        <p>🕔 Festen starter kl. 17 – og vi bliver ved, til vi løber tør for øl.</p>
+        <p><strong>🍽️ Menu:</strong></p>
+        <ul>
+          <li>🥨 En stor tallerken med "pretzel" saltkringle, en god ristet pølse og krydret sauerkraut — selvfølgelig med grov hjemmelavet sennep til.</li>
+          <li>🧀 Fra Gudhjem kommer Carraig Grilled Cheese med en speciallavet Oktoberfest-sandwich.</li>
+        </ul>
+        <p>🎉 Gratis adgang – kom og vær med til en aften, vi sent vil glemme!</p>
+        <p>🎁 <strong>Bonus:</strong> Til alle der kommer klædt i lederhosen eller dirndl skænker vi en hel Maß (1 liter) til prisen af en almindelig (0,4 liter) øl — eller en almindelig størrelse til prisen af en lille øl.</p>
+      </div>
+    </div>
+  </div>
 
   <section id="tours" class="section">
     <div class="container">
