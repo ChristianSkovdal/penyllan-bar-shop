@@ -192,7 +192,9 @@ window.translations = {
           eller send en <a href="https://m.me/penyllan" target="_blank" rel="noopener">Facebook-besked</a>.`,
     "contact.address": "Adresse",
     "contact.country": "Danmark",
-    "contact.follow": "Følg os"
+    "contact.follow": "Følg os",
+    "footer.smileyAria": "Se vores seneste kontrolrapport hos Fødevarestyrelsen (Smiley-ordningen)",
+    "footer.smileyText": "Se vores seneste kontrolrapport"
   },
 
   en: {
@@ -386,7 +388,9 @@ window.translations = {
           or send a <a href="https://m.me/penyllan" target="_blank" rel="noopener">Facebook message</a>.`,
     "contact.address": "Address",
     "contact.country": "Denmark",
-    "contact.follow": "Follow us"
+    "contact.follow": "Follow us",
+    "footer.smileyAria": "See our latest inspection report from the Danish Veterinary and Food Administration (Smiley scheme)",
+    "footer.smileyText": "See our latest inspection report"
   },
 
   de: {
@@ -579,7 +583,9 @@ window.translations = {
           oder senden Sie uns eine <a href="https://m.me/penyllan" target="_blank" rel="noopener">Facebook-Nachricht</a>.`,
     "contact.address": "Adresse",
     "contact.country": "Dänemark",
-    "contact.follow": "Folgen Sie uns"
+    "contact.follow": "Folgen Sie uns",
+    "footer.smileyAria": "Sehen Sie unseren letzten Kontrollbericht der dänischen Lebensmittelbehörde (Smiley-Ordnung)",
+    "footer.smileyText": "Unseren letzten Kontrollbericht ansehen"
   },
 
   pl: {
@@ -773,6 +779,8 @@ window.translations = {
           lub wyślij <a href="https://m.me/penyllan" target="_blank" rel="noopener">wiadomość na Facebooku</a>.`,
     "contact.address": "Adres",
     "contact.country": "Dania",
-    "contact.follow": "Obserwuj nas"
+    "contact.follow": "Obserwuj nas",
+    "footer.smileyAria": "Zobacz nasz najnowszy raport kontrolny duńskiego urzędu ds. żywności (system Smiley)",
+    "footer.smileyText": "Zobacz nasz najnowszy raport kontrolny"
   }
 };
