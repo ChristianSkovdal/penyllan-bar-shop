@@ -59,7 +59,7 @@ window.translations = {
     "welcome.imgAlt": "Pyntet træ med lyskæder og tønder i bryggeriet",
 
     "hours.title": "Åbningstider",
-    "hours.everyday": "Alle dage",
+    "hours.everyday": "Hver dag",
     "hours.note": `Tjek vores <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
           for eventuelle ændringer i åbningstiderne.`,
 
@@ -80,64 +80,11 @@ window.translations = {
     "events.intro": `Vi holder løbende events i bar og butik — her er et udpluk. Se altid vores
         <a href="https://www.facebook.com/penyllanbarandshop/events" target="_blank" rel="noopener">Facebook-side</a>
         for datoer og detaljer.`,
-
-    "event1.alt": "Hyggeligt aftenmiljø med tønder og lyskæder",
-    "event1.date": "Udvalgte fredage",
-    "event1.title": "Fredagsbar med Levende Musik",
-    "event1.text": "Lokale musikere spiller i tapstuen, mens solen går ned over havnen.",
-
-    "event2.alt": "Gæster skåler sammen i bryggeriet",
-    "event2.date": "Juli",
-    "event2.title": "Sommerfest ved Havnen",
-    "event2.text": "Musik, mad og masser af fadøl på kajen — årets store sommerevent.",
-
-    "event3.alt": "Penyllan modtager Dansk Ølmærke 2026",
-    "event3.date": "August",
-    "event3.title": "Ølfestival",
-    "event3.text": "Smag hele sortimentet på én dag, inklusive specialbryg fra fadkælderen.",
-
-    "event4.alt": "Penyllan Bryggeri skilt i sne om aftenen",
-    "event4.date": "December",
-    "event4.title": "Julefrokost i Bryggeriet",
-    "event4.text": "Hygge, glögg og julesnaps mellem bryggekedlerne.",
-
-    "event5.alt": "Pyntet træ med lyskæder i bryggeriet",
-    "event5.date": "April",
-    "event5.title": "Påskebryg & Rundvisning",
-    "event5.text": "Sæsonens påskeøl smages sammen med en tur rundt i bryggeriet.",
-
-    "event6.alt": "Mørk øl på bord med udsigt over havnen",
-    "event6.date": "Løbende hele året",
-    "event6.title": "Ny Årgang på Fad",
-    "event6.text": "Vi tapper løbende nye specialbryg — følg med på Facebook for hvad der lige nu står på hanerne.",
-
-    "event7.alt": "Ølkrus på tønde med lyskæder om aftenen",
-    "event7.date": "Oktober",
-    "event7.title": "Whisky & Øl Aften",
-    "event7.text": "En hyggelig aften med smagning af fadlagrede specialøl og udvalgte whiskyer.",
-
-    "event8.alt": "Bålfad på terrassen ved havnen om aftenen",
-    "event8.date": "31. december",
-    "event8.title": "Nytårsbrag på Kajen",
-    "event8.text": "Vi fejrer det nye år med bobler, bål og fyrværkeri over havnen.",
-
-    "event9.alt": "Oktoberfest-plakat med ølkrus, skum og kringler",
-    "event9.date": "26. september 2026",
-    "event9.title": "Oktoberfest",
-    "event9.text": "Vi holder Penyllans tredje Oktoberfest! Glæd dig til en dag med festligt selskab, mættende tysk-inspireret mad og selvfølgelig vores helt egen Oktoberfest-øl.",
-    "event9.linkText": "Læs mere",
-    "event9.modalTitle": "Oktoberfest",
-    "event9.modalText": `<p>🍻 Lørdag d. 26. september slår vi dørene op til Penyllans tredje Oktoberfest! Glæd dig til en dag med festligt selskab, mættende tysk-inspireret mad og selvfølgelig vores helt egen Oktoberfest-øl brygget til lejligheden.</p>
-        <p>☀️ Hvis vejret er godt, rykker vi festen ud i vores nye biergarten med udsigt over Østersøen. Er vejret imod os, fortsætter vi indenfor i baren, hvor der også serveres øl fra hanerne, vin, most, cocktails og sodavand.</p>
-        <p>🎶 Hele aftenen vil der være masser af tysk musik, god stemning og masser af skål og skrål!</p>
-        <p>🕔 Festen starter kl. 17 – og vi bliver ved, til vi løber tør for øl.</p>
-        <p><strong>🍽️ Menu:</strong></p>
-        <ul>
-          <li>🥨 En stor tallerken med "pretzel" saltkringle, en god ristet pølse og krydret sauerkraut — selvfølgelig med grov hjemmelavet sennep til.</li>
-          <li>🧀 Fra Gudhjem kommer Carraig Grilled Cheese med en speciallavet Oktoberfest-sandwich.</li>
-        </ul>
-        <p>🎉 Gratis adgang – kom og vær med til en aften, vi sent vil glemme!</p>
-        <p>🎁 <strong>Bonus:</strong> Til alle der kommer klædt i lederhosen eller dirndl skænker vi en hel Maß (1 liter) til prisen af en almindelig (0,4 liter) øl — eller en almindelig størrelse til prisen af en lille øl.</p>`,
+    "events.loading": "Indlæser events…",
+    "events.empty": "Der er ingen kommende events lige nu — kig forbi vores Facebook-side.",
+    "events.error": "Kunne ikke hente events lige nu.",
+    "events.readMore": "Læs mere",
+    "events.showLess": "Vis mindre",
 
     "privateEvents.title": "Private events",
     "privateEvents.text": `Vores lokaler og biergarten kan lejes til private fester og arrangementer — fødselsdage, firmafester,
@@ -276,64 +223,11 @@ window.translations = {
     "events.intro": `We regularly hold events in the bar and shop — here's a selection. Always check our
         <a href="https://www.facebook.com/penyllanbarandshop/events" target="_blank" rel="noopener">Facebook page</a>
         for dates and details.`,
-
-    "event1.alt": "Cosy evening setting with barrels and fairy lights",
-    "event1.date": "Selected Fridays",
-    "event1.title": "Friday Bar with Live Music",
-    "event1.text": "Local musicians play in the taproom while the sun sets over the harbour.",
-
-    "event2.alt": "Guests toasting together in the brewery",
-    "event2.date": "July",
-    "event2.title": "Summer Party at the Harbour",
-    "event2.text": "Music, food and plenty of draft beer on the quay — the year's big summer event.",
-
-    "event3.alt": "Penyllan receives the Danish Beer Award 2026",
-    "event3.date": "August",
-    "event3.title": "Beer Festival",
-    "event3.text": "Taste the entire range in one day, including special brews from the cellar.",
-
-    "event4.alt": "Penyllan Brewery sign in the snow in the evening",
-    "event4.date": "December",
-    "event4.title": "Christmas Lunch at the Brewery",
-    "event4.text": "Cosiness, mulled wine and Christmas schnapps among the brewing kettles.",
-
-    "event5.alt": "Decorated tree with fairy lights in the brewery",
-    "event5.date": "April",
-    "event5.title": "Easter Brew & Tour",
-    "event5.text": "Taste the season's Easter beer along with a tour of the brewery.",
-
-    "event6.alt": "Dark beer on a table with a view of the harbour",
-    "event6.date": "Ongoing all year",
-    "event6.title": "New Batch on Tap",
-    "event6.text": "We're constantly tapping new special brews — follow us on Facebook to see what's on tap right now.",
-
-    "event7.alt": "Beer mug on a barrel with fairy lights in the evening",
-    "event7.date": "October",
-    "event7.title": "Whisky & Beer Evening",
-    "event7.text": "A cosy evening tasting barrel-aged special beers and selected whiskies.",
-
-    "event8.alt": "Fire bowl on the terrace by the harbour in the evening",
-    "event8.date": "31 December",
-    "event8.title": "New Year's Bang at the Quay",
-    "event8.text": "We celebrate the New Year with bubbly, bonfires and fireworks over the harbour.",
-
-    "event9.alt": "Oktoberfest poster with a beer mug, foam and pretzels",
-    "event9.date": "26 September 2026",
-    "event9.title": "Oktoberfest",
-    "event9.text": "We're holding Penyllan's third Oktoberfest! Look forward to a day of festive company, hearty German-inspired food and, of course, our very own Oktoberfest beer.",
-    "event9.linkText": "Read more",
-    "event9.modalTitle": "Oktoberfest",
-    "event9.modalText": `<p>🍻 On Saturday 26 September we open the doors to Penyllan's third Oktoberfest! Look forward to a day of festive company, hearty German-inspired food and, of course, our very own Oktoberfest beer, brewed especially for the occasion.</p>
-        <p>☀️ If the weather is good, we'll move the party out into our new beer garden with a view of the Baltic Sea. If the weather isn't on our side, we'll continue inside the bar, where we also serve draft beer, wine, cider, cocktails and soft drinks.</p>
-        <p>🎶 All evening there'll be plenty of German music, great atmosphere and lots of cheers and singing!</p>
-        <p>🕔 The party starts at 5pm — and we keep going until we run out of beer.</p>
-        <p><strong>🍽️ Menu:</strong></p>
-        <ul>
-          <li>🥨 A big plate with a pretzel, a good grilled sausage and spiced sauerkraut — of course served with coarse homemade mustard.</li>
-          <li>🧀 From Gudhjem comes Carraig Grilled Cheese with a specially made Oktoberfest sandwich.</li>
-        </ul>
-        <p>🎉 Free admission — come and be part of an evening we won't forget for a long time!</p>
-        <p>🎁 <strong>Bonus:</strong> Everyone who comes dressed in lederhosen or a dirndl gets a full Maß (1 litre) for the price of a regular (0.4 litre) beer, or a regular size for the price of a small beer.</p>`,
+    "events.loading": "Loading events…",
+    "events.empty": "No upcoming events right now — check our Facebook page.",
+    "events.error": "Could not load events right now.",
+    "events.readMore": "Read more",
+    "events.showLess": "Show less",
 
     "privateEvents.title": "Private Events",
     "privateEvents.text": `Our premises and beer garden can be rented for private parties and events — birthdays, company parties,
@@ -471,64 +365,11 @@ window.translations = {
     "events.title": "Veranstaltungen",
     "events.intro": `Wir veranstalten laufend Events in Bar und Shop — hier eine Auswahl. Aktuelle Termine und Details finden Sie immer auf unserer
         <a href="https://www.facebook.com/penyllanbarandshop/events" target="_blank" rel="noopener">Facebook-Seite</a>.`,
-
-    "event1.alt": "Gemütliche Abendstimmung mit Fässern und Lichterketten",
-    "event1.date": "Ausgewählte Freitage",
-    "event1.title": "Freitagsbar mit Live-Musik",
-    "event1.text": "Lokale Musiker spielen im Tapstuben, während die Sonne über dem Hafen untergeht.",
-
-    "event2.alt": "Gäste stoßen gemeinsam in der Brauerei an",
-    "event2.date": "Juli",
-    "event2.title": "Sommerfest am Hafen",
-    "event2.text": "Musik, Essen und jede Menge Fassbier am Kai — das große Sommerevent des Jahres.",
-
-    "event3.alt": "Penyllan erhält die Dänische Bierauszeichnung 2026",
-    "event3.date": "August",
-    "event3.title": "Bierfestival",
-    "event3.text": "Verkosten Sie an einem Tag das gesamte Sortiment, einschließlich Spezialbiere aus dem Fasskeller.",
-
-    "event4.alt": "Penyllan Brauerei-Schild im Schnee am Abend",
-    "event4.date": "Dezember",
-    "event4.title": "Weihnachtsessen in der Brauerei",
-    "event4.text": "Gemütlichkeit, Glühwein und Weihnachtsschnaps zwischen den Braukesseln.",
-
-    "event5.alt": "Geschmückter Baum mit Lichterketten in der Brauerei",
-    "event5.date": "April",
-    "event5.title": "Osterbier & Führung",
-    "event5.text": "Probieren Sie das saisonale Osterbier bei einer Führung durch die Brauerei.",
-
-    "event6.alt": "Dunkles Bier auf einem Tisch mit Blick auf den Hafen",
-    "event6.date": "Laufend das ganze Jahr",
-    "event6.title": "Neuer Jahrgang vom Fass",
-    "event6.text": "Wir zapfen laufend neue Spezialbiere — folgen Sie uns auf Facebook, um zu sehen, was gerade am Hahn ist.",
-
-    "event7.alt": "Bierkrug auf einem Fass mit Lichterketten am Abend",
-    "event7.date": "Oktober",
-    "event7.title": "Whisky- & Bierabend",
-    "event7.text": "Ein gemütlicher Abend mit Verkostung von fassgelagerten Spezialbieren und ausgewählten Whiskys.",
-
-    "event8.alt": "Feuerschale auf der Terrasse am Hafen am Abend",
-    "event8.date": "31. Dezember",
-    "event8.title": "Silvesterknall am Kai",
-    "event8.text": "Wir feiern das neue Jahr mit Sekt, Lagerfeuer und Feuerwerk über dem Hafen.",
-
-    "event9.alt": "Oktoberfest-Plakat mit Bierkrug, Schaum und Brezeln",
-    "event9.date": "26. September 2026",
-    "event9.title": "Oktoberfest",
-    "event9.text": "Wir feiern Penyllans drittes Oktoberfest! Freuen Sie sich auf einen Tag voller geselliger Stimmung, herzhaftem, deutsch inspiriertem Essen und natürlich unserem eigenen Oktoberfestbier.",
-    "event9.linkText": "Mehr erfahren",
-    "event9.modalTitle": "Oktoberfest",
-    "event9.modalText": `<p>🍻 Am Samstag, den 26. September, öffnen wir die Türen zu Penyllans drittem Oktoberfest! Freuen Sie sich auf einen Tag voller geselliger Stimmung, herzhaftem, deutsch inspiriertem Essen und natürlich unserem eigenen, extra für den Anlass gebrauten Oktoberfestbier.</p>
-        <p>☀️ Bei gutem Wetter verlegen wir das Fest in unseren neuen Biergarten mit Blick auf die Ostsee. Bei schlechtem Wetter feiern wir drinnen in der Bar weiter, wo auch Bier vom Fass, Wein, Most, Cocktails und Softdrinks serviert werden.</p>
-        <p>🎶 Den ganzen Abend gibt es jede Menge deutsche Musik, gute Stimmung und viel Prost und Gesang!</p>
-        <p>🕔 Das Fest beginnt um 17 Uhr — und wir machen weiter, bis uns das Bier ausgeht.</p>
-        <p><strong>🍽️ Menü:</strong></p>
-        <ul>
-          <li>🥨 Ein großer Teller mit Brezel, einer guten gegrillten Wurst und würzigem Sauerkraut — natürlich mit grobem, hausgemachtem Senf dazu.</li>
-          <li>🧀 Aus Gudhjem kommt Carraig Grilled Cheese mit einem eigens kreierten Oktoberfest-Sandwich.</li>
-        </ul>
-        <p>🎉 Freier Eintritt – seien Sie dabei bei einem Abend, den wir so schnell nicht vergessen werden!</p>
-        <p>🎁 <strong>Bonus:</strong> Alle, die in Lederhosen oder Dirndl kommen, erhalten eine ganze Maß (1 Liter) zum Preis eines normalen (0,4 Liter) Bieres oder eine normale Größe zum Preis eines kleinen Bieres.</p>`,
+    "events.loading": "Events werden geladen…",
+    "events.empty": "Momentan keine anstehenden Veranstaltungen — schauen Sie auf unserer Facebook-Seite vorbei.",
+    "events.error": "Veranstaltungen konnten gerade nicht geladen werden.",
+    "events.readMore": "Mehr erfahren",
+    "events.showLess": "Weniger anzeigen",
 
     "privateEvents.title": "Private Veranstaltungen",
     "privateEvents.text": `Unsere Räumlichkeiten und der Biergarten können für private Feiern und Veranstaltungen gemietet werden —
@@ -667,64 +508,11 @@ window.translations = {
     "events.intro": `Regularnie organizujemy wydarzenia w barze i sklepie — oto ich wybór. Zawsze sprawdzaj naszą
         <a href="https://www.facebook.com/penyllanbarandshop/events" target="_blank" rel="noopener">stronę na Facebooku</a>,
         aby poznać terminy i szczegóły.`,
-
-    "event1.alt": "Przytulny wieczorny klimat z beczkami i lampkami",
-    "event1.date": "Wybrane piątki",
-    "event1.title": "Piątkowy bar z muzyką na żywo",
-    "event1.text": "Lokalni muzycy grają w tawernie, gdy słońce zachodzi nad portem.",
-
-    "event2.alt": "Goście wznoszą toast razem w browarze",
-    "event2.date": "Lipiec",
-    "event2.title": "Letnia impreza w porcie",
-    "event2.text": "Muzyka, jedzenie i mnóstwo piwa z beczki na nabrzeżu — największe letnie wydarzenie roku.",
-
-    "event3.alt": "Penyllan otrzymuje Duńską Nagrodę Piwną 2026",
-    "event3.date": "Sierpień",
-    "event3.title": "Festiwal piwa",
-    "event3.text": "Skosztuj całego asortymentu w jeden dzień, w tym specjalnych piw z piwniczki beczkowej.",
-
-    "event4.alt": "Szyld Browaru Penyllan na śniegu wieczorem",
-    "event4.date": "Grudzień",
-    "event4.title": "Świąteczny lunch w browarze",
-    "event4.text": "Przytulna atmosfera, grzane wino i świąteczna nalewka wśród kotłów warzelnych.",
-
-    "event5.alt": "Ozdobione drzewko z lampkami w browarze",
-    "event5.date": "Kwiecień",
-    "event5.title": "Piwo wielkanocne i zwiedzanie",
-    "event5.text": "Skosztuj sezonowego piwa wielkanocnego podczas zwiedzania browaru.",
-
-    "event6.alt": "Ciemne piwo na stole z widokiem na port",
-    "event6.date": "Cały rok",
-    "event6.title": "Nowy rocznik z beczki",
-    "event6.text": "Na bieżąco nalewamy nowe piwa specjalne — śledź nas na Facebooku, aby zobaczyć, co jest teraz na kranach.",
-
-    "event7.alt": "Kufel piwa na beczce z lampkami wieczorem",
-    "event7.date": "Październik",
-    "event7.title": "Wieczór z whisky i piwem",
-    "event7.text": "Przytulny wieczór degustacji piw specjalnych leżakowanych w beczkach oraz wybranych whisky.",
-
-    "event8.alt": "Palenisko na tarasie przy porcie wieczorem",
-    "event8.date": "31 grudnia",
-    "event8.title": "Sylwestrowy huk na nabrzeżu",
-    "event8.text": "Świętujemy Nowy Rok z szampanem, ogniskiem i fajerwerkami nad portem.",
-
-    "event9.alt": "Plakat Oktoberfest z kuflem piwa, pianą i preclami",
-    "event9.date": "26 września 2026",
-    "event9.title": "Oktoberfest",
-    "event9.text": "Organizujemy trzeci Oktoberfest w Penyllan! Ciesz się dniem pełnym radosnego towarzystwa, sycącego jedzenia inspirowanego kuchnią niemiecką i oczywiście naszym własnym piwem Oktoberfest.",
-    "event9.linkText": "Czytaj więcej",
-    "event9.modalTitle": "Oktoberfest",
-    "event9.modalText": `<p>🍻 W sobotę 26 września otwieramy drzwi na trzeci Oktoberfest w Penyllan! Ciesz się dniem pełnym radosnego towarzystwa, sycącego jedzenia inspirowanego kuchnią niemiecką i oczywiście naszym własnym piwem Oktoberfest, uwarzonym specjalnie na tę okazję.</p>
-        <p>☀️ Jeśli pogoda dopisze, przenosimy imprezę do naszego nowego ogródka piwnego z widokiem na Bałtyk. Jeśli pogoda nas zawiedzie, kontynuujemy w barze, gdzie serwujemy również piwo z kranu, wino, cydr, koktajle i napoje bezalkoholowe.</p>
-        <p>🎶 Przez cały wieczór będzie mnóstwo niemieckiej muzyki, świetna atmosfera oraz mnóstwo toastów i śpiewu!</p>
-        <p>🕔 Impreza zaczyna się o 17:00 — i trwa, dopóki nie skończy się piwo.</p>
-        <p><strong>🍽️ Menu:</strong></p>
-        <ul>
-          <li>🥨 Duży talerz z precelem, dobrze grillowaną kiełbasą i pikantną kiszoną kapustą — oczywiście z grubą, domową musztardą.</li>
-          <li>🧀 Z Gudhjem przyjeżdża Carraig Grilled Cheese ze specjalnie przygotowaną kanapką Oktoberfest.</li>
-        </ul>
-        <p>🎉 Wstęp wolny – dołącz do wieczoru, którego długo nie zapomnimy!</p>
-        <p>🎁 <strong>Bonus:</strong> Wszyscy, którzy przyjdą ubrani w lederhosen lub dirndl, otrzymają całą Maß (1 litr) w cenie zwykłego (0,4 litra) piwa, lub zwykły rozmiar w cenie małego piwa.</p>`,
+    "events.loading": "Ładowanie wydarzeń…",
+    "events.empty": "Obecnie brak nadchodzących wydarzeń — zajrzyj na naszą stronę na Facebooku.",
+    "events.error": "Nie udało się teraz załadować wydarzeń.",
+    "events.readMore": "Czytaj więcej",
+    "events.showLess": "Pokaż mniej",
 
     "privateEvents.title": "Prywatne wydarzenia",
     "privateEvents.text": `Nasze pomieszczenia i ogródek piwny można wynająć na prywatne przyjęcia i wydarzenia — urodziny,

@@ -103,31 +103,120 @@ if (navToggle && mainNav) {
   });
 })();
 
-// Oktoberfest details modal
+// Events — pulled live from Beer Here's admin-managed event list
+// (data/events.json on beerhere.dk) via its public /api/events endpoint,
+// so events only need to be entered once, in Beerhere's admin panel.
+// Note: that data is Danish-only, so event cards stay in Danish regardless
+// of the site's language toggle — only the surrounding UI text (loading/
+// empty/error, "Read more") is translated.
 (function () {
-  const openBtn = document.getElementById('oktoberfest-details-btn');
-  const modal = document.getElementById('oktoberfest-modal');
-  const closeBtn = document.getElementById('oktoberfest-modal-close');
-  if (!openBtn || !modal || !closeBtn) return;
+  const grid = document.getElementById('event-grid');
+  if (!grid) return;
 
-  function openModal() {
+  const modal = document.getElementById('event-preview-modal');
+  const modalClose = document.getElementById('event-preview-modal-close');
+  const modalTitle = document.getElementById('event-preview-modal-title');
+  const modalBody = document.getElementById('event-preview-modal-body');
+
+  function currentLang() {
+    return document.documentElement.getAttribute('lang') || 'da';
+  }
+
+  function t(key, fallback) {
+    const dict = (window.translations && window.translations[currentLang()]) || {};
+    return dict[key] !== undefined ? dict[key] : fallback;
+  }
+
+  function openModal(title, html) {
+    if (!modal) return;
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
     modal.hidden = false;
   }
 
   function closeModal() {
+    if (!modal) return;
     modal.hidden = true;
   }
 
-  openBtn.addEventListener('click', openModal);
-  closeBtn.addEventListener('click', closeModal);
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (modal) {
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  }
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.hidden) closeModal();
+    if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
   });
+
+  const DA_MONTHS = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
+
+  function formatEventDate(iso) {
+    if (!iso) return '';
+    const parts = iso.split('-');
+    if (parts.length !== 3) return iso;
+    const day = parseInt(parts[2], 10);
+    const month = DA_MONTHS[parseInt(parts[1], 10) - 1];
+    if (!month || !day) return iso;
+    return day + '. ' + month + ' ' + parts[0];
+  }
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function renderStatus(key, fallback) {
+    const p = document.createElement('p');
+    p.className = 'event-status';
+    p.setAttribute('data-i18n', key);
+    p.textContent = t(key, fallback);
+    grid.innerHTML = '';
+    grid.appendChild(p);
+  }
+
+  function renderEvents(events) {
+    if (!events.length) {
+      renderStatus('events.empty', 'Der er ingen kommende events lige nu.');
+      return;
+    }
+
+    grid.innerHTML = '';
+    events.forEach((ev) => {
+      const article = document.createElement('article');
+      article.className = 'event-card';
+
+      let html = '';
+      if (ev.image) {
+        html += '<div class="event-image"><img src="' + escapeHtml(ev.image) + '" alt="' + escapeHtml(ev.title || '') + '" loading="lazy"></div>';
+      }
+      html += '<div class="event-body">';
+      html += '<p class="event-date">' + escapeHtml(formatEventDate(ev.date)) + '</p>';
+      html += '<h3>' + escapeHtml(ev.title || '') + '</h3>';
+      if (ev.synopsis) html += '<p>' + escapeHtml(ev.synopsis) + '</p>';
+      if (ev.description && ev.description.trim()) {
+        html += '<p><button type="button" class="link-button event-readmore-btn" data-i18n="events.readMore">' + escapeHtml(t('events.readMore', 'Læs mere')) + '</button></p>';
+      }
+      html += '</div>';
+      article.innerHTML = html;
+
+      const readMoreBtn = article.querySelector('.event-readmore-btn');
+      if (readMoreBtn) {
+        readMoreBtn.addEventListener('click', () => openModal(ev.title || '', ev.description));
+      }
+
+      grid.appendChild(article);
+    });
+  }
+
+  function loadEvents() {
+    const source = grid.getAttribute('data-events-source');
+    if (!source) return;
+    renderStatus('events.loading', 'Indlæser events…');
+    fetch(source)
+      .then((res) => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+      .then((data) => renderEvents(Array.isArray(data) ? data : []))
+      .catch(() => renderStatus('events.error', 'Kunne ikke hente events lige nu.'));
+  }
+
+  loadEvents();
 })();
 
 // Simple "open now" indicator based on daily 11-21 opening hours.
