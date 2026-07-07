@@ -545,6 +545,11 @@ img { max-width: 100%; display: block; }
 
 .event-body h3 {
   margin-bottom: 0.5rem;
+  /* Lange ord (fx "Bryggerirundvisning") skal ombrydes i stedet for at blive
+     klippet af kortets overflow: hidden. */
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .event-body p:last-child {

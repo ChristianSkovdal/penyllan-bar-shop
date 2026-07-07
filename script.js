@@ -147,16 +147,21 @@ if (navToggle && mainNav) {
     if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
   });
 
-  const DA_MONTHS = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
+  // Site-sprog -> BCP-47 locale til datoformatering.
+  const DATE_LOCALES = { da: 'da-DK', en: 'en-GB', de: 'de-DE', pl: 'pl-PL' };
 
   function formatEventDate(iso) {
     if (!iso) return '';
     const parts = iso.split('-');
     if (parts.length !== 3) return iso;
-    const day = parseInt(parts[2], 10);
-    const month = DA_MONTHS[parseInt(parts[1], 10) - 1];
-    if (!month || !day) return iso;
-    return day + '. ' + month + ' ' + parts[0];
+    const d = new Date(Date.UTC(+parts[0], +parts[1] - 1, +parts[2]));
+    if (isNaN(d.getTime())) return iso;
+    const locale = DATE_LOCALES[currentLang()] || DATE_LOCALES.da;
+    try {
+      return new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(d);
+    } catch (e) {
+      return iso;
+    }
   }
 
   function escapeHtml(str) {
@@ -206,15 +211,27 @@ if (navToggle && mainNav) {
     });
   }
 
+  let lastLoadedLang = null;
+
   function loadEvents() {
     const source = grid.getAttribute('data-events-source');
     if (!source) return;
+    const lang = currentLang();
+    lastLoadedLang = lang;
+    // Bed feedet om events på det aktuelle sprog (beerhere.dk oversætter med DeepL).
+    const url = source + (source.indexOf('?') === -1 ? '?' : '&') + 'lang=' + encodeURIComponent(lang);
     renderStatus('events.loading', 'Indlæser events…');
-    fetch(source)
+    fetch(url)
       .then((res) => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
       .then((data) => renderEvents(Array.isArray(data) ? data : []))
       .catch(() => renderStatus('events.error', 'Kunne ikke hente events lige nu.'));
   }
+
+  // Hent events på ny når sproget skifter, så tekst og dato følger sprogvælgeren.
+  document.addEventListener('penyllan:langchange', (e) => {
+    const lang = (e.detail && e.detail.lang) || currentLang();
+    if (lang !== lastLoadedLang) loadEvents();
+  });
 
   loadEvents();
 })();
@@ -301,6 +318,9 @@ function updateOpenStatus(lang) {
 
     updateOpenStatus(lang);
     localStorage.setItem(STORAGE_KEY, lang);
+
+    // Lad andre moduler (fx event-listen) reagere på sprogskift.
+    document.dispatchEvent(new CustomEvent('penyllan:langchange', { detail: { lang } }));
   }
 
   if (trigger) {
