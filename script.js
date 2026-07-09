@@ -347,39 +347,20 @@ function updateOpenStatus(lang) {
   }
 }
 
-// Fetch the live hours once on load. Priority:
-//   1. Manual override (opening-hours-override.json) if "active": true — a staff
-//      backup that wins over Google, editable via admin-hours.html.
-//   2. Live hours from the /api/opening-hours endpoint (Google).
-//   3. Static fallback table baked into index.html.
+// Fetch the live hours once on load from the /api/opening-hours endpoint. The
+// backend itself prefers a manual admin override (set in beerhere.dk/admin →
+// Åbningstider) over Google, so the frontend just consumes the result. Falls
+// back to the static table baked into index.html if the endpoint is down.
 // Language re-rendering is handled by the language switcher calling updateOpenStatus().
 (function () {
   const el = document.querySelector('[data-hours-source]');
   const source = el ? el.getAttribute('data-hours-source') : null;
-  const overrideSrc = el ? el.getAttribute('data-hours-override') : null;
-
-  function loadFromApi() {
-    if (!source) { updateOpenStatus(hoursLang()); return; }
-    fetch(source)
-      .then((res) => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
-      .then((data) => { if (data && Array.isArray(data.days)) hoursData = data; })
-      .catch(() => { /* keep the static fallback */ })
-      .finally(() => updateOpenStatus(hoursLang()));
-  }
-
-  if (!overrideSrc) { loadFromApi(); return; }
-
-  fetch(overrideSrc, { cache: 'no-store' })
-    .then((res) => (res.ok ? res.json() : null))
-    .then((ov) => {
-      if (ov && ov.active && Array.isArray(ov.days) && ov.days.length) {
-        hoursData = ov; // manual override wins
-        updateOpenStatus(hoursLang());
-      } else {
-        loadFromApi();
-      }
-    })
-    .catch(loadFromApi);
+  if (!source) { updateOpenStatus(hoursLang()); return; }
+  fetch(source)
+    .then((res) => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+    .then((data) => { if (data && Array.isArray(data.days)) hoursData = data; })
+    .catch(() => { /* keep the static fallback */ })
+    .finally(() => updateOpenStatus(hoursLang()));
 })();
 
 // Language switcher (dropdown)
