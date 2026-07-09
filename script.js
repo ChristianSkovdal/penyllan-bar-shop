@@ -236,30 +236,151 @@ if (navToggle && mainNav) {
   loadEvents();
 })();
 
-// Simple "open now" indicator based on daily 11-21 opening hours.
-// Note: this does not account for Facebook-announced exceptions.
-const OPEN_HOUR = 11;
-const CLOSE_HOUR = 21;
+// Opening hours + "open now" badge — pulled live from beerhere.dk/api/opening-hours
+// (a server-side Google Business Profile lookup), same pattern as the events feed.
+// The Google API key stays on the server; the frontend only reads clean JSON:
+//   { "openNow": true|false|null,
+//     "days": [ { "day": 0, "open": "11:00", "close": "21:00" }, ... ],   // day: JS getDay(), 0=Sun..6=Sat
+//     "days[i].closed": true  // optional, for days the bar is closed
+//   }
+// If the endpoint is missing or fails, we fall back to the static 11–21 table
+// baked into index.html, so the site never shows an empty section.
+const HOURS_LOCALES = { da: 'da-DK', en: 'en-GB', de: 'de-DE', pl: 'pl-PL' };
+const HOURS_FALLBACK = { openNow: null, days: [0, 1, 2, 3, 4, 5, 6].map((d) => ({ day: d, open: '11:00', close: '21:00' })) };
 
 const statusEl = document.getElementById('open-status');
+const hoursTableBody = document.querySelector('.hours-table tbody');
+
+let hoursData = null; // populated once the endpoint responds; until then we use the fallback
+
+function hoursLang() {
+  return document.documentElement.getAttribute('lang') || 'da';
+}
+
+function parseHM(s) {
+  const m = /^(\d{1,2}):(\d{2})$/.exec(s || '');
+  return m ? { h: +m[1], m: +m[2] } : null;
+}
+
+function fmtTime(s, lang) {
+  const p = parseHM(s);
+  if (!p) return s || '';
+  const locale = HOURS_LOCALES[lang] || HOURS_LOCALES.da;
+  const d = new Date();
+  d.setHours(p.h, p.m, 0, 0);
+  try {
+    return new Intl.DateTimeFormat(locale, { hour: 'numeric', minute: p.m ? '2-digit' : undefined }).format(d);
+  } catch (e) {
+    return s;
+  }
+}
+
+function weekdayLabel(jsDay, lang) {
+  const locale = HOURS_LOCALES[lang] || HOURS_LOCALES.da;
+  // 2024-01-07 (UTC) is a Sunday; add jsDay to land on the right weekday name.
+  const d = new Date(Date.UTC(2024, 0, 7 + jsDay));
+  const label = new Intl.DateTimeFormat(locale, { weekday: 'long', timeZone: 'UTC' }).format(d);
+  return label.charAt(0).toUpperCase() + label.slice(1);
+}
+
+function activeHours() {
+  return hoursData && Array.isArray(hoursData.days) && hoursData.days.length ? hoursData : HOURS_FALLBACK;
+}
+
+function allDaysEqual(days) {
+  return days.every((d) => d.open === days[0].open && d.close === days[0].close && !d.closed === !days[0].closed);
+}
+
+function todayEntry(data) {
+  const day = new Date().getDay();
+  return data.days.find((d) => d.day === day) || null;
+}
+
+function isOpenNow(data) {
+  if (typeof data.openNow === 'boolean') return data.openNow; // backend is authoritative (handles special hours + timezone)
+  const today = todayEntry(data);
+  if (!today || today.closed) return false;
+  const o = parseHM(today.open), c = parseHM(today.close);
+  if (!o || !c) return false;
+  const now = new Date();
+  const mins = now.getHours() * 60 + now.getMinutes();
+  return mins >= o.h * 60 + o.m && mins < c.h * 60 + c.m;
+}
+
+function renderHoursTable(lang) {
+  if (!hoursTableBody) return;
+  const data = activeHours();
+  const dict = (window.translations && window.translations[lang]) || {};
+  const byDay = {};
+  data.days.forEach((d) => { byDay[d.day] = d; });
+  const ordered = [1, 2, 3, 4, 5, 6, 0].map((i) => byDay[i]).filter(Boolean); // Mon..Sun
+
+  const rangeText = (d) => d.closed
+    ? (dict['hours.closed'] || 'Lukket')
+    : fmtTime(d.open, lang) + ' – ' + fmtTime(d.close, lang);
+  const row = (label, value) => '<tr><th>' + label + '</th><td>' + value + '</td></tr>';
+
+  hoursTableBody.innerHTML = allDaysEqual(data.days)
+    ? row(dict['hours.everyday'] || 'Hver dag', rangeText(data.days[0]))
+    : ordered.map((d) => row(weekdayLabel(d.day, lang), rangeText(d))).join('');
+}
 
 function updateOpenStatus(lang) {
+  renderHoursTable(lang);
   if (!statusEl) return;
   const dict = (window.translations && window.translations[lang]) || {};
-  const now = new Date();
-  const hour = now.getHours();
-  const isOpen = hour >= OPEN_HOUR && hour < CLOSE_HOUR;
+  const data = activeHours();
+  const today = todayEntry(data);
+  const tmpl = (key, fallback, time) => (dict[key] || fallback).replace('{time}', time);
 
   statusEl.classList.remove('open', 'closed');
 
-  if (isOpen) {
-    statusEl.textContent = dict['status.open'] || 'Åbent nu · 11-21';
+  if (isOpenNow(data) && today) {
+    statusEl.textContent = tmpl('status.openUntil', 'Åbent nu · lukker {time}', fmtTime(today.close, lang));
     statusEl.classList.add('open');
+  } else if (today && !today.closed) {
+    statusEl.textContent = tmpl('status.closedOpensAt', 'Lukket nu · åbner {time}', fmtTime(today.open, lang));
+    statusEl.classList.add('closed');
   } else {
-    statusEl.textContent = dict['status.closed'] || 'Lukket nu · Åbner kl. 11';
+    statusEl.textContent = dict['status.closedToday'] || 'Lukket i dag';
     statusEl.classList.add('closed');
   }
 }
+
+// Fetch the live hours once on load. Priority:
+//   1. Manual override (opening-hours-override.json) if "active": true — a staff
+//      backup that wins over Google, editable via admin-hours.html.
+//   2. Live hours from the /api/opening-hours endpoint (Google).
+//   3. Static fallback table baked into index.html.
+// Language re-rendering is handled by the language switcher calling updateOpenStatus().
+(function () {
+  const el = document.querySelector('[data-hours-source]');
+  const source = el ? el.getAttribute('data-hours-source') : null;
+  const overrideSrc = el ? el.getAttribute('data-hours-override') : null;
+
+  function loadFromApi() {
+    if (!source) { updateOpenStatus(hoursLang()); return; }
+    fetch(source)
+      .then((res) => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+      .then((data) => { if (data && Array.isArray(data.days)) hoursData = data; })
+      .catch(() => { /* keep the static fallback */ })
+      .finally(() => updateOpenStatus(hoursLang()));
+  }
+
+  if (!overrideSrc) { loadFromApi(); return; }
+
+  fetch(overrideSrc, { cache: 'no-store' })
+    .then((res) => (res.ok ? res.json() : null))
+    .then((ov) => {
+      if (ov && ov.active && Array.isArray(ov.days) && ov.days.length) {
+        hoursData = ov; // manual override wins
+        updateOpenStatus(hoursLang());
+      } else {
+        loadFromApi();
+      }
+    })
+    .catch(loadFromApi);
+})();
 
 // Language switcher (dropdown)
 (function () {

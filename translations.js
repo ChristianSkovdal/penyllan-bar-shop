@@ -19,6 +19,9 @@ window.translations = {
     "status.checkFacebook": "Tjek Facebook for åbningstider",
     "status.open": "Åbent nu · 11-21",
     "status.closed": "Lukket nu · Åbner kl. 11",
+    "status.openUntil": "Åbent nu · lukker {time}",
+    "status.closedOpensAt": "Lukket nu · åbner {time}",
+    "status.closedToday": "Lukket i dag",
 
     "slide1.alt": "Cocktail med citron ved havnen i solskin",
     "slide1.eyebrow": "Hver sommer",
@@ -60,6 +63,7 @@ window.translations = {
 
     "hours.title": "Åbningstider",
     "hours.everyday": "Hver dag",
+    "hours.closed": "Lukket",
     "hours.note": `Tjek vores <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-side</a>
           for eventuelle ændringer i åbningstiderne.`,
 
@@ -162,6 +166,9 @@ window.translations = {
     "status.checkFacebook": "Check Facebook for opening hours",
     "status.open": "Open now · 11am–9pm",
     "status.closed": "Closed now · Opens at 11am",
+    "status.openUntil": "Open now · closes {time}",
+    "status.closedOpensAt": "Closed now · opens {time}",
+    "status.closedToday": "Closed today",
 
     "slide1.alt": "Cocktail with lemon by the harbour in sunshine",
     "slide1.eyebrow": "Every summer",
@@ -203,6 +210,7 @@ window.translations = {
 
     "hours.title": "Opening Hours",
     "hours.everyday": "Every day",
+    "hours.closed": "Closed",
     "hours.note": `Check our <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook page</a>
           for any changes to the opening hours.`,
 
@@ -305,6 +313,9 @@ window.translations = {
     "status.checkFacebook": "Öffnungszeiten auf Facebook prüfen",
     "status.open": "Jetzt geöffnet · 11-21 Uhr",
     "status.closed": "Jetzt geschlossen · Öffnet um 11 Uhr",
+    "status.openUntil": "Jetzt geöffnet · schließt um {time}",
+    "status.closedOpensAt": "Jetzt geschlossen · öffnet um {time}",
+    "status.closedToday": "Heute geschlossen",
 
     "slide1.alt": "Cocktail mit Zitrone am Hafen im Sonnenschein",
     "slide1.eyebrow": "Jeden Sommer",
@@ -346,6 +357,7 @@ window.translations = {
 
     "hours.title": "Öffnungszeiten",
     "hours.everyday": "Täglich",
+    "hours.closed": "Geschlossen",
     "hours.note": `Schauen Sie auf unserer <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">Facebook-Seite</a>
           nach eventuellen Änderungen der Öffnungszeiten.`,
 
@@ -447,6 +459,9 @@ window.translations = {
     "status.checkFacebook": "Sprawdź godziny otwarcia na Facebooku",
     "status.open": "Otwarte teraz · 11-21",
     "status.closed": "Zamknięte teraz · Otwieramy o 11",
+    "status.openUntil": "Otwarte teraz · zamykamy o {time}",
+    "status.closedOpensAt": "Zamknięte teraz · otwieramy o {time}",
+    "status.closedToday": "Zamknięte dzisiaj",
 
     "slide1.alt": "Koktajl z cytryną nad portem w słońcu",
     "slide1.eyebrow": "Każde lato",
@@ -488,6 +503,7 @@ window.translations = {
 
     "hours.title": "Godziny otwarcia",
     "hours.everyday": "Codziennie",
+    "hours.closed": "Zamknięte",
     "hours.note": `Sprawdź naszą <a href="https://www.facebook.com/penyllanbarandshop" target="_blank" rel="noopener">stronę na Facebooku</a>
           w razie zmian godzin otwarcia.`,
 

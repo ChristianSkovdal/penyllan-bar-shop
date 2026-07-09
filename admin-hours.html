@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin – Åbningstider – Penyllan Bar &amp; Shop</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Staatliches&family=Bitter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hours-admin { max-width: 620px; }
+  .hours-admin .toggle-row { display: flex; align-items: center; gap: .6rem; margin: 1rem 0 1.5rem; }
+  .hours-admin table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+  .hours-admin th, .hours-admin td { padding: .5rem .4rem; text-align: left; vertical-align: middle; }
+  .hours-admin thead th { font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+  .hours-admin input[type="time"] { padding: .3rem .4rem; font: inherit; }
+  .hours-admin .day-name { white-space: nowrap; font-weight: 600; }
+  .hours-admin button.gen { padding: .6rem 1.1rem; font: inherit; cursor: pointer; }
+  .hours-admin textarea { width: 100%; min-height: 190px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .85rem; padding: .6rem; margin-top: 1rem; box-sizing: border-box; }
+  .hours-admin .hint { font-size: .9rem; opacity: .85; }
+  .hours-admin .disabled-note { opacity: .55; }
+</style>
+</head>
+<body class="admin-page">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Penyllan Bar &amp; Shop</a>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container hours-admin">
+      <a class="back-link" href="admin.html">&larr; Til admin</a>
+      <h1>Åbningstider – manuel overstyring</h1>
+      <p class="note">
+        Normalt hentes åbningstiderne automatisk fra Google. Brug denne side, hvis I
+        midlertidigt vil <strong>overstyre</strong> tiderne (fx en uventet lukkedag eller
+        særlige tider). Udfyld nedenfor, tryk <em>Generér</em>, og gem indholdet i filen
+        <code>opening-hours-override.json</code>. Sæt <em>Aktivér</em> fra igen for at gå
+        tilbage til Google.
+      </p>
+
+      <div class="toggle-row">
+        <input type="checkbox" id="active">
+        <label for="active"><strong>Aktivér manuel overstyring</strong> (vinder over Google)</label>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Dag</th><th>Lukket</th><th>Åbner</th><th>Lukker</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+
+      <button type="button" class="gen" id="generate">Generér JSON</button>
+
+      <p class="hint">Kopiér herunder og gem som <code>opening-hours-override.json</code> (commit til git).</p>
+      <textarea id="output" readonly spellcheck="false"></textarea>
+      <p><button type="button" class="gen" id="copy">Kopiér</button></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Penyllan Bar &amp; Shop</p>
+  </div>
+</footer>
+
+<script>
+  // Rækkefølge man-søn, med JS getDay()-tal (0=søn..6=lør).
+  const DAYS = [
+    { day: 1, name: 'Mandag' },
+    { day: 2, name: 'Tirsdag' },
+    { day: 3, name: 'Onsdag' },
+    { day: 4, name: 'Torsdag' },
+    { day: 5, name: 'Fredag' },
+    { day: 6, name: 'Lørdag' },
+    { day: 0, name: 'Søndag' },
+  ];
+
+  const rowsEl = document.getElementById('rows');
+  DAYS.forEach((d) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td class="day-name">' + d.name + '</td>' +
+      '<td><input type="checkbox" data-role="closed" data-day="' + d.day + '"></td>' +
+      '<td><input type="time" data-role="open" data-day="' + d.day + '" value="11:00"></td>' +
+      '<td><input type="time" data-role="close" data-day="' + d.day + '" value="21:00"></td>';
+    rowsEl.appendChild(tr);
+  });
+
+  // Grå tider ud når "Lukket" er sat.
+  rowsEl.addEventListener('change', (e) => {
+    if (e.target.getAttribute('data-role') !== 'closed') return;
+    const day = e.target.getAttribute('data-day');
+    rowsEl.querySelectorAll('input[data-day="' + day + '"]').forEach((inp) => {
+      if (inp.getAttribute('data-role') === 'open' || inp.getAttribute('data-role') === 'close') {
+        inp.disabled = e.target.checked;
+        inp.parentElement.classList.toggle('disabled-note', e.target.checked);
+      }
+    });
+  });
+
+  function build() {
+    const days = DAYS.map((d) => {
+      const closed = rowsEl.querySelector('input[data-role="closed"][data-day="' + d.day + '"]').checked;
+      if (closed) return { day: d.day, closed: true };
+      const open = rowsEl.querySelector('input[data-role="open"][data-day="' + d.day + '"]').value || '11:00';
+      const close = rowsEl.querySelector('input[data-role="close"][data-day="' + d.day + '"]').value || '21:00';
+      return { day: d.day, open: open, close: close };
+    });
+    return { active: document.getElementById('active').checked, openNow: null, days: days };
+  }
+
+  document.getElementById('generate').addEventListener('click', () => {
+    document.getElementById('output').value = JSON.stringify(build(), null, 2) + '\n';
+  });
+
+  document.getElementById('copy').addEventListener('click', async () => {
+    const ta = document.getElementById('output');
+    if (!ta.value) ta.value = JSON.stringify(build(), null, 2) + '\n';
+    try { await navigator.clipboard.writeText(ta.value); }
+    catch (e) { ta.select(); document.execCommand('copy'); }
+  });
+</script>
+
+</body>
+</html>
